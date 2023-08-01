@@ -1,5 +1,5 @@
 CREATE TABLE pessoa
 (
-    cpf CHAR(11) PRIMARY KEY,
+    cpf  CHAR(11) PRIMARY KEY,
     nome VARCHAR(50) NOT NULL
 );
