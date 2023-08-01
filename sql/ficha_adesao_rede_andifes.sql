@@ -4,11 +4,16 @@
 CREATE TABLE ficha_adesao_rede_andifes
 (
     id                                       SERIAL PRIMARY KEY,
-    link_termo_compromisso                   TEXT NOT NULL,
-    link_oficio_coordenador_pedagogico_geral TEXT NOT NULL,
-    link_politica_linguistica                TEXT NOT NULL,
+    link_termo_compromisso                   TEXT    NOT NULL,
+    link_oficio_coordenador_pedagogico_geral TEXT    NOT NULL,
+    link_politica_linguistica                TEXT    NOT NULL,
+    instituicao                              INTEGER NOT NULL,
 
     CONSTRAINT fk_ficha_historica FOREIGN KEY (id)
         REFERENCES ficha_historica (id)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_ficha_historica_instituicao FOREIGN KEY (instituicao)
+        REFERENCES insituicao_ensino_superior (id)
         ON DELETE CASCADE
 );
