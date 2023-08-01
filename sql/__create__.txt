@@ -1,3 +1,5 @@
+# Arquivo contento a ordem de criação das tabelas.
+
 dummy2
 dummy1
 pessoa
@@ -10,3 +12,5 @@ ficha_adesao_rede_andifes
 ficha_credenciamento_especialista
 requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
+
+# end
