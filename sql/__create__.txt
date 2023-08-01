@@ -2,3 +2,5 @@ dummy2
 dummy1
 pessoa
 especialista
+gestor_andifes
+edital
