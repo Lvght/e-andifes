@@ -12,13 +12,21 @@ pessoa
 # Tabela de relacionamento entre pessoa e email.
 pessoa_email
 
+# Variações de pessoa
+professor_isf
+
 especialista
+
+# Variações de especialista
 gestor_andifes
+docente_orientador
+
 instituicao_ensino_superior
 edital
 ficha_base
 ficha_adesao_rede_andifes
 ficha_credenciamento_especialista
+ficha_credenciamento_professor_isf
 requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 
