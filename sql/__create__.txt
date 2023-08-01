@@ -2,3 +2,11 @@ dummy2
 dummy1
 pessoa
 especialista
+gestor_andifes
+instituicao_ensino_superior
+ficha_historica
+edital
+ficha_adesao_rede_andifes
+ficha_credenciamento_especialista
+requisitante_adesao_rede_andifes
+email_requisitante_adesao_rede_andifes
