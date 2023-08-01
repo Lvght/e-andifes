@@ -1,2 +1,4 @@
 dummy2
 dummy1
+pessoa
+especialista
