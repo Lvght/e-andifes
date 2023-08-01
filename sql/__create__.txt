@@ -1,8 +1,12 @@
-# Arquivo contento a ordem de criação das tabelas.
+# Arquivo contendo a ordem de criação das tabelas.
 
+# Teste para verificar se o script funciona.
 dummy2
 dummy1
+
+# Entidade principal. Representa o usuário.
 pessoa
+
 especialista
 gestor_andifes
 instituicao_ensino_superior
