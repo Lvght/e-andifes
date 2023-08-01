@@ -14,6 +14,6 @@ CREATE TABLE ficha_adesao_rede_andifes
         ON DELETE CASCADE,
 
     CONSTRAINT fk_ficha_historica_instituicao FOREIGN KEY (instituicao)
-        REFERENCES insituicao_ensino_superior (id)
+        REFERENCES instituicao_ensino_superior (id)
         ON DELETE CASCADE
 );

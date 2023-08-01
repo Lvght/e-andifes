@@ -1,4 +1,4 @@
-CREATE TABLE insituicao_ensino_superior
+CREATE TABLE instituicao_ensino_superior
 (
     id SERIAL PRIMARY KEY
 );
