@@ -9,11 +9,11 @@ CREATE TABLE ficha_adesao_rede_andifes
     link_politica_linguistica                TEXT    NOT NULL,
     instituicao                              INTEGER NOT NULL,
 
-    CONSTRAINT fk_ficha_historica FOREIGN KEY (id)
-        REFERENCES ficha_historica (id)
+    CONSTRAINT fk_ficha_base FOREIGN KEY (id)
+        REFERENCES ficha_base (id)
         ON DELETE CASCADE,
 
-    CONSTRAINT fk_ficha_historica_instituicao FOREIGN KEY (instituicao)
+    CONSTRAINT fk_ficha_base_instituicao FOREIGN KEY (instituicao)
         REFERENCES instituicao_ensino_superior (id)
         ON DELETE CASCADE
 );

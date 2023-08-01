@@ -10,7 +10,7 @@ CREATE TABLE ficha_credenciamento_especialista
     CONSTRAINT fk_especialista FOREIGN KEY (especialista)
         REFERENCES especialista (cpf)
         ON DELETE CASCADE,
-    CONSTRAINT fk_ficha_historica FOREIGN KEY (id)
-        REFERENCES ficha_historica (id)
+    CONSTRAINT fk_ficha_base FOREIGN KEY (id)
+        REFERENCES ficha_base (id)
         ON DELETE CASCADE
 );

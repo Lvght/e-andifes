@@ -5,5 +5,10 @@ CREATE TABLE email_requisitante_adesao_rede_andifes
 
     CONSTRAINT fk_requisitante
         FOREIGN KEY(requisitante)
-            REFERENCES requisitante_adesao_rede_andifes(cpf)
+            REFERENCES requisitante_adesao_rede_andifes(cpf),
+
+    CONSTRAINT fk_email
+        FOREIGN KEY(email)
+            REFERENCES email(endereco)
+            ON UPDATE CASCADE
 );
