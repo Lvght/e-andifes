@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  database:
+    build: .
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+        - ./logs:/var/logs
