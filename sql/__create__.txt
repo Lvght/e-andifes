@@ -30,6 +30,7 @@ ficha_base
 deferimento_edital
 ficha_adesao_rede_andifes
 ficha_credenciamento_especialista
+professor_isf
 ficha_credenciamento_professor_isf
 ficha_adesao_docente_oferta_coletiva
 ficha_inscricao_oferta_coletiva
@@ -37,6 +38,5 @@ requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 aluno_graduacao
 parceiro
-professor_isf
 
 # end
