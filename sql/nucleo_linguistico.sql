@@ -1,7 +1,8 @@
 CREATE TABLE nucleo_linguistico
 (
     id            SERIAL PRIMARY KEY,
-    FK_IES        VARCHAR(50) NOT NULL,
+    -- Aqui precisaria alterar o tipo da chave primária FK_IES, caso não seja integer na outra tabela
+    FK_IES        INT NOT NULL,
     logradouro    VARCHAR(100) NOT NULL,
     FK_CEP        VARCHAR(8) NOT NULL,
 
@@ -13,7 +14,8 @@ CREATE TABLE nucleo_linguistico
 
     CONSTRAINT fk_instituicao_ensino_superior
         FOREIGN KEY (FK_IES)
-            REFERENCES instituicao_ensino_superior (PK_IES)
+        -- Aqui precisaria alterar para a chave primária que for da instituição de ensino
+            REFERENCES instituicao_ensino_superior (id)
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
