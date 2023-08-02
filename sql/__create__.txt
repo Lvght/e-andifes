@@ -27,6 +27,7 @@ docente_orientador
 instituicao_ensino_superior
 edital
 ficha_base
+deferimento_edital
 ficha_adesao_rede_andifes
 ficha_credenciamento_especialista
 ficha_credenciamento_professor_isf
