@@ -23,6 +23,8 @@ especialista
 # Variações de especialista
 gestor_andifes
 docente_orientador
+docente_especialista
+
 
 instituicao_ensino_superior
 edital
