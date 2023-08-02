@@ -10,6 +10,10 @@ CREATE TABLE IF NOT EXISTS especialista
     setor_atuacao VARCHAR(255) NOT NULL,
     lattes VARCHAR(255) UNIQUE NOT NULL,
     maior_titulacao VARCHAR(100) NOT NULL,
-    CONSTRAINT fk_especialista_pessoa FOREIGN KEY (cpf) REFERENCES pessoa(cpf),
+    CONSTRAINT fk_especialista_pessoa
+        FOREIGN KEY (cpf)
+            REFERENCES pessoa(cpf)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
     CONSTRAINT pk_especialista PRIMARY KEY (cpf)
 );
