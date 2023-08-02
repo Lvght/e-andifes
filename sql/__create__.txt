@@ -14,7 +14,6 @@ pessoa
 pessoa_email
 
 # Variações de pessoa
-professor_isf
 aluno_comunidade_academica
 aluno_comunidade_academica_telefone
 
@@ -38,5 +37,6 @@ requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 aluno_graduacao
 parceiro
+professor_isf
 
 # end
