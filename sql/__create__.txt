@@ -7,6 +7,7 @@ telefone
 turma_ofertada_idioma
 
 # Entidade principal. Representa o usuário.
+endereco
 pessoa
 
 # Tabela de relacionamento entre pessoa e email.
