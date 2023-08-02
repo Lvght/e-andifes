@@ -18,6 +18,7 @@ professor_isf
 aluno_comunidade_academica
 aluno_comunidade_academica_telefone
 
+# Professores pós graduados credenciados à Rede Andifes
 especialista
 
 # Variações de especialista
