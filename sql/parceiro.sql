@@ -10,7 +10,7 @@ CREATE TABLE parceiro (
         FOREIGN KEY (cpf)
             REFERENCES especialista (cpf)
             ON DELETE CASCADE
-            ON UPDATE CASCADE
+            ON UPDATE CASCADE,
 
     CONSTRAINT fk_endereco
         FOREIGN KEY (id)
