@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS disciplina_especializacao
     nome VARCHAR(255) UNIQUE NOT NULL,
    
     
-    CONSTRAINT pk_disciplinaespecializacao PRIMARY KEY (idd)
+    CONSTRAINT pk_disciplinaespecializacao PRIMARY KEYY (idd)
 );
