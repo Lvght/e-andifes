@@ -8,7 +8,7 @@ CREATE TABLE parceiro (
 
     CONSTRAINT fk_gestor
         FOREIGN KEY (cpf)
-            REFERENCES especialista (cpf)
+            REFERENCES pessoa(cpf)
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
