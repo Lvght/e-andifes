@@ -47,4 +47,7 @@ aluno_graduacao
 parceiro
 professor_isf_edita_repositorio
 
+# Tabela que representa o relacionamento N para N entre o 'docente_orientador' e o 'aluno_graduacao'
+orientador_orienta_aluno_graduacao
+
 # end
