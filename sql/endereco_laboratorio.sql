@@ -5,7 +5,7 @@ CREATE TABLE endereco_laboratorio
     logradouro  VARCHAR(100) NOT NULL,
     FK_CEP      VARCHAR(8) NOT NULL,
 
-    CONSTRAINT fk_ies_endereco_nucleo
+    CONSTRAINT fk_ies_endereco_laboratorio
         FOREIGN KEY (FK_IES)
             REFERENCES instituicao_ensino_superior (PK_IES)
             ON DELETE CASCADE
