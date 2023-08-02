@@ -18,6 +18,6 @@ CREATE TABLE nucleo_linguistico
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
-    CONSTRAINT unique_nuc
+    CONSTRAINT unique_nucleo
         UNIQUE (FK_CEP, FK_IES)
 );
