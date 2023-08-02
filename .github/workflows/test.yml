@@ -22,7 +22,7 @@ jobs:
         sudo chown -R $USER:$USER /var/logs && \
         docker-compose -f docker-compose.yml up -d
 
-     - name: Test if container is running
+    - name: Test if container is running
       run: |
         sleep 10 && \
         if ! docker-compose -f docker-compose.yml ps | grep Up; then
