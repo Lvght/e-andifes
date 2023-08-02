@@ -24,6 +24,7 @@ especialista
 gestor_andifes
 docente_orientador
 
+cursista
 instituicao_ensino_superior
 edital
 ficha_base
@@ -36,5 +37,9 @@ ficha_inscricao_oferta_coletiva
 requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 aluno_graduacao
+parceiro
+material
+repositorioCursista
+orientadorOrientaCursista
 
 # end
