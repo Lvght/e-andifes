@@ -6,11 +6,11 @@ CREATE TABLE parceiro (
     bairro VARCHAR(100) NOT NULL,
     complemento VARCHAR(100),
 
-    CONSTRAINT fk_gestor
-        FOREIGN KEY (cpf)
-            REFERENCES pessoa(cpf)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE,
+--    CONSTRAINT fk_gestor
+--        FOREIGN KEY (cpf)
+--            REFERENCES especialista(cpf)
+--            ON DELETE CASCADE
+--            ON UPDATE CASCADE,
 
     CONSTRAINT fk_endereco
         FOREIGN KEY (id)
