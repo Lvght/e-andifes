@@ -1,7 +1,6 @@
 #!/bin/bash
 
 file="/opt/sql/__create__.txt";
-
 while read t; do
   if [[ -z "${t%?}" || ${t:0:1} == '#' ]]; then
     continue;
