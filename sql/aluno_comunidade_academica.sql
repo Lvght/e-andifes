@@ -1,10 +1,14 @@
 -- TODO Talvez remover "acadêmica" torne o linguajar mais inclusivo.
 CREATE TABLE aluno_comunidade_academica
 (
-    cpf                CHAR(11) PRIMARY KEY,
-    nome               VARCHAR(100) NOT NULL,
-    genero             GENERO       NOT NULL,
-    instituicao_ensino VARCHAR(100) NOT NULL,
+    cpf                     CHAR(11) PRIMARY KEY,
+    area_atuacao            VARCHAR(50) NOT NULL,
+    tipo_vinculo            VARCHAR(50) NOT NULL,
+    genero                  char(1)     NOT NULL,
+    instituicao_ensino      VARCHAR(50) NOT NULL,
+    comprovante_matricula   VARCHAR(50) NOT NULL,  
+    titulo                  VARCHAR(50) NOT NULL,
+    data_inicio             DATE        NOT NULL,     
 
     -- FIXME Validar essa restrição
     CONSTRAINT fk_pessoa
