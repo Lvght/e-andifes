@@ -1,14 +1,13 @@
 CREATE TABLE nucleo_linguistico
 (
-    id            SERIAL PRIMARY KEY,
     -- Aqui precisaria alterar o tipo da chave primária FK_IES, caso não seja integer na outra tabela
-    FK_IES        INT NOT NULL,
+    FK_IES        INT NOT NULL PRIMARY KEY,
     logradouro    VARCHAR(100) NOT NULL,
     FK_CEP        VARCHAR(8) NOT NULL,
 
     CONSTRAINT fk_cep
         FOREIGN KEY (FK_CEP)
-            REFERENCES endereco (CEP)
+            REFERENCES endereco (cep)
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
@@ -19,6 +18,6 @@ CREATE TABLE nucleo_linguistico
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
-    CONSTRAINT unique_endereco_instituicao
+    CONSTRAINT unique_nuc
         UNIQUE (FK_CEP, FK_IES)
 );
