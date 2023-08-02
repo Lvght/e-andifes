@@ -34,5 +34,6 @@ ficha_adesao_docente_oferta_coletiva
 ficha_inscricao_oferta_coletiva
 requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
+aluno_graduacao
 
 # end
