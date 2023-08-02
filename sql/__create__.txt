@@ -4,6 +4,7 @@ __tipos
 
 email
 telefone
+endereco
 turma_ofertada_idioma
 
 # Entidade principal. Representa o usuário.
