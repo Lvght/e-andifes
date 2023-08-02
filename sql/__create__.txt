@@ -38,5 +38,6 @@ requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 aluno_graduacao
 parceiro
+professor_isf_edita_repositorio
 
 # end
