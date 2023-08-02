@@ -16,5 +16,5 @@ CREATE TABLE professor_isf
     
     CONSTRAINT fk_ficha_base
     	FOREIGN KEY (id) 
-    	    REFERENCES ficha_base
+    	    REFERENCES ficha_base (id)
 );
