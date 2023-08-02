@@ -11,7 +11,5 @@ CREATE TABLE IF NOT EXISTS especialista
     lattes VARCHAR(255) UNIQUE NOT NULL,
     maior_titulacao VARCHAR(100) NOT NULL,
     credenciado_em VARCHAR(60),
-    CONSTRAINT fk_especialista_pessoa FOREIGN KEY (cpf) REFERENCES pessoa(cpf),
-    CONSTRAINT pk_especialista PRIMARY KEY (cpf),
-    CONSTRAINT fk_especialistaCredenciadoEm FOREIGN KEY (credenciado_em) REFERENCES ficha_credenciamento_especialista(credenciado_em)
+    CONSTRAINT pk_especialista PRIMARY KEY (cpf)
 );
