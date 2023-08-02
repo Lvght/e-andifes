@@ -1,4 +1,4 @@
--- Tabela que refere-se as informações para que seja possível o Professor ISF editar os material de um repositório
+-- Tabela que refere-se as informações para que seja possível o Professor ISF editar os materiais de um repositório
 
 CREATE TABLE professor_isf_edita_repositorio (
 	id SERIAL PRIMARY KEY,
