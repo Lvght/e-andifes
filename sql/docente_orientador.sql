@@ -17,14 +17,14 @@ CREATE TABLE docente_orientador
         FOREIGN KEY (cpf)
             REFERENCES especialista (cpf)
                 ON DELETE CASCADE
-                ON UPDATE CASCADE,
-    
-    CONSTRAINT fk_adesao_docente_oc
-        FOREIGN KEY (adesao_docente_oc)
-            REFERENCES ficha_base (id)
-                ON DELETE CASCADE
                 ON UPDATE CASCADE
-
+    
+    -- CONSTRAINT fk_adesao_docente_oc
+    --     FOREIGN KEY (adesao_docente_oc)
+    --         REFERENCES ficha_base (id)
+    --             ON DELETE CASCADE
+    --             ON UPDATE CASCADE
+--
     --CONSTRAINT fk_gestor_oferta
     --    FOREIGN KEY (gestor_oferta)
     --        REFERENCES especialista (cpf)
