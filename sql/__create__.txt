@@ -1,10 +1,10 @@
 # Arquivo contendo a ordem de criação das tabelas.
 
-# Teste para verificar se o script funciona.
-dummy2
-dummy1
+# META
+__tipos
 
 email
+telefone
 turma_ofertada_idioma
 
 # Entidade principal. Representa o usuário.
@@ -15,6 +15,8 @@ pessoa_email
 
 # Variações de pessoa
 professor_isf
+aluno_comunidade_academica
+aluno_comunidade_academica_telefone
 
 especialista
 
@@ -29,6 +31,7 @@ ficha_adesao_rede_andifes
 ficha_credenciamento_especialista
 ficha_credenciamento_professor_isf
 ficha_adesao_docente_oferta_coletiva
+ficha_inscricao_oferta_coletiva
 requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 
