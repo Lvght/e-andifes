@@ -1,5 +1,4 @@
 # Arquivo contendo a ordem de criação das tabelas.
-
 # META
 __tipos
 
