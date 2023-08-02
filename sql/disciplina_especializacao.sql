@@ -1,7 +1,6 @@
 CREATE TABLE IF NOT EXISTS disciplina_especializacao
 (
-    id SERIAL(100),
-    nome VARCHAR(100) NOT NULL,
+    id SERIAL,
     carga_horaria VARCHAR(255) NOT NULL,
     eixo_tematico VARCHAR(255) NOT NULL,
     componente_curricular VARCHAR(255) NOT NULL,
