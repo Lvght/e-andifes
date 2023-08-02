@@ -1,0 +1,28 @@
+CREATE TABLE cursista_gerencia_repositorio(
+
+cpf_cursista char(11) PRIMARY KEY,
+codigo_repositorio VARCHAR(50) PRIMARY KEY,
+dia_semana VARCHAR(16) PRIMARY KEY,
+horario_inicio DATETIME PRIMARY KEY,
+codigo_curso VARCHAR(16) PRIMARY KEY,
+horas_praticas_validadas INTEGER,
+horas_praticas_solicitadas INTEGER,
+
+CONSTRAINT fk_CPF
+    FOREIGN KEY cpf_cursista
+        REFERENCES pessoa(cpf)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+CONSTRAINT fk_codigo_repositorio
+    FOREIGN KEY codigo_repositorio
+        REFERENCES repositorio_cursista(codigo)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+CONSTRAINT fk_codigo_curso
+    FOREIGN KEY codigo_curso
+        REFERENCES curso(codigo_curso)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
