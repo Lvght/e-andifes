@@ -31,5 +31,6 @@ ficha_credenciamento_professor_isf
 ficha_adesao_docente_oferta_coletiva
 requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
+aluno_graduacao
 
 # end
