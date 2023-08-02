@@ -1,7 +1,7 @@
 CREATE TABLE cursista(
     cpf CHAR(11) PRIMARY KEY,
-    idiomaCredenciado VARCHAR(10) NOT NULL,
-    siglaInstitEnsino VARCHAR(5) NOT NULL,
+    idioma_credenciado IDIOMA NOT NULL,
+    sigla_institEnsino CHAR(10) NOT NULL,
     diploma_link TEXT NOT NULL,
     curriculo_link TEXT NOT NULL,		
     certificadoPOCA_link TEXT NOT NULL,
