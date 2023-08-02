@@ -20,11 +20,11 @@ jobs:
       run: |
         sudo mkdir /var/logs && sudo chmod 777 /var/logs && \
         sudo chown -R $USER:$USER /var/logs && \
-        docker-compose -f docker-compose.yml up -d
+        docker-compose -f docker-compose.yml up -d --build
 
     - name: Test if container is running
       run: |
-        sleep 30 && \
+        sleep 60 && \
         if ! docker-compose -f docker-compose.yml ps | grep Up; then
           exit 1
         fi
