@@ -36,5 +36,7 @@ ficha_inscricao_oferta_coletiva
 requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 aluno_graduacao
-
+gestor_oferta_coletiva
+disciplina_especializacao
+turma_disciplina_especializacao
 # end
