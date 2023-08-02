@@ -17,7 +17,7 @@ CREATE TABLE docente_orientador
         FOREIGN KEY (cpf)
             REFERENCES especialista (cpf)
                 ON DELETE CASCADE
-                ON UPDATE CASCADE
+                ON UPDATE CASCADEE
     
     -- CONSTRAINT fk_adesao_docente_oc
     --     FOREIGN KEY (adesao_docente_oc)
