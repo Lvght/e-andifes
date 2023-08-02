@@ -14,6 +14,6 @@ CREATE TABLE pessoa
     CONSTRAINT fk_cep
         FOREIGN KEY (cep)
             REFERENCES endereco(cep)
-            ON DELETE NO ACTION
+            ON DELETE RESTRICT 
             ON UPDATE NO ACTION 
 );
