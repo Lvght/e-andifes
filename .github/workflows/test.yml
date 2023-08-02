@@ -18,6 +18,7 @@ jobs:
 
     - name: Docker Compose Up
       run: |
+        mkdir /var/logs && chmod 777 /var/logs && \
         docker-compose -f docker-compose.yml up
 
     - name: Shutdown containers
