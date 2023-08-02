@@ -27,6 +27,7 @@ docente_orientador
 
 instituicao_ensino_superior
 laboratorio_isf
+nucleo_linguistico
 edital
 ficha_base
 deferimento_edital
