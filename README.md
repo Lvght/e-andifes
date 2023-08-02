@@ -10,6 +10,13 @@ Execute em seu terminal:
 docker compose up -d
 ```
 
+No Linux, na primeira execução, é possível que seja necessário criar um diretório para os logs do banco. Faça isso com o comando:
+
+```bash
+mkdir logs
+chmod 777 logs
+```
+
 Para remover o ambiente, execute:
 
 ```bash
