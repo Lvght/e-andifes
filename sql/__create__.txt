@@ -5,6 +5,7 @@ dummy2
 dummy1
 
 email
+turma_ofertada_idioma
 
 # Entidade principal. Representa o usuário.
 pessoa
@@ -27,6 +28,7 @@ ficha_base
 ficha_adesao_rede_andifes
 ficha_credenciamento_especialista
 ficha_credenciamento_professor_isf
+ficha_adesao_docente_oferta_coletiva
 requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 
