@@ -24,7 +24,7 @@ jobs:
 
     - name: Test if container is running
       run: |
-        sleep 10 && \
+        sleep 30 && \
         if ! docker-compose -f docker-compose.yml ps | grep Up; then
           exit 1
         fi
