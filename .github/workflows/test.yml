@@ -1,0 +1,22 @@
+name: Create DB
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Docker Compose Up
+      run: |
+        docker-compose -f docker-compose.yml up
+
+    - name: Shutdown containers
+      run: |
+        docker-compose -f docker-compose.yml down
