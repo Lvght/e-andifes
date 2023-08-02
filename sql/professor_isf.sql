@@ -10,11 +10,11 @@ CREATE TABLE professor_isf
 
     CONSTRAINT fk_pessoa 
     	FOREIGN KEY (cpf) 
-    		REFERENCES pessoa(cpf) 
-    		ON DELETE CASCADE 
-    		ON UPDATE CASCADE,
+    	    REFERENCES pessoa(cpf) 
+    	    ON DELETE CASCADE 
+    	    ON UPDATE CASCADE,
     
     CONSTRAINT fk_ficha_base
-    	FOREIGN KEY (titulo_formulario, data_inicio_formulario) 
-    		REFERENCES ficha_base
+    	FOREIGN KEY (id) 
+    	    REFERENCES ficha_base
 );
