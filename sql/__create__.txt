@@ -26,6 +26,7 @@ gestor_andifes
 docente_orientador
 
 instituicao_ensino_superior
+laboratorio_isf
 edital
 ficha_base
 deferimento_edital
