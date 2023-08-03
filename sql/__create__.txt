@@ -45,8 +45,10 @@ ficha_inscricao_oferta_coletiva
 requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 aluno_graduacao
-professor_isf_edita_repositorio
 parceiro
+professor_isf_edita_repositorio
+
+repositorio_cursista
 professor_isf_edita_repositorio
 
 # Tabela que representa o relacionamento N para N entre o 'docente_orientador' e o 'aluno_graduacao'

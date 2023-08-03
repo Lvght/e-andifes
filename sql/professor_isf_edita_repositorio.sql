@@ -16,7 +16,7 @@ CREATE TABLE professor_isf_edita_repositorio (
 	
 	CONSTRAINT fk_repositorio_cursista
 		FOREIGN KEY (codigo_repositorio) 
-			REFERENCES repositorio_cursista (codigo),
+			REFERENCES repositorio_cursista (id),
 	
 	CONSTRAINT professor_isf_cursista_codigo_repositorio 
 		UNIQUE (professor_isf, cursista, codigo_repositorio)
