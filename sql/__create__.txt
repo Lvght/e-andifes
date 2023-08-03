@@ -14,7 +14,6 @@ pessoa
 pessoa_email
 
 # Variações de pessoa
-professor_isf
 aluno_comunidade_academica
 aluno_comunidade_academica_telefone
 cursista
@@ -39,6 +38,7 @@ ficha_base
 deferimento_edital
 ficha_adesao_rede_andifes
 ficha_credenciamento_especialista
+professor_isf
 ficha_credenciamento_professor_isf
 ficha_adesao_docente_oferta_coletiva
 ficha_inscricao_oferta_coletiva
@@ -52,4 +52,5 @@ professor_isf_edita_repositorio
 
 # Tabela que representa o relacionamento N para N entre o 'docente_orientador' e o 'aluno_graduacao'
 orientador_orienta_aluno_graduacao
+
 # end
