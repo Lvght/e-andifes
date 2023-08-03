@@ -16,6 +16,7 @@ pessoa_email
 # Variações de pessoa
 aluno_comunidade_academica
 aluno_comunidade_academica_telefone
+cursista
 
 # Professores pós graduados credenciados à Rede Andifes
 especialista
@@ -45,6 +46,9 @@ requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 aluno_graduacao
 parceiro
+
+repositorio_cursista
+professor_isf_edita_repositorio
 
 # Tabela que representa o relacionamento N para N entre o 'docente_orientador' e o 'aluno_graduacao'
 orientador_orienta_aluno_graduacao
