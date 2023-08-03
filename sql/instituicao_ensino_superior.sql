@@ -7,7 +7,15 @@ CREATE TABLE instituicao_ensino_superior
     e_polo             BOOLEAN NOT NULL, -- o uso de acentos em nomes de coluna pode levar a problemas, então mudei "é_polo" para "e_polo"
     contato_reitoria   VARCHAR(50),
     IES_sigla          VARCHAR(10) NOT NULL,
+    FK_id_endereco     INT NOT NULL,
+
+    CONSTRAINT fk_endereco_ies
+        FOREIGN KEY (FK_id_endereco)
+            REFERENCES endereco (id)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
 
     CONSTRAINT unique_nome_campus
         UNIQUE (nome_completo, campus)
+
 );
