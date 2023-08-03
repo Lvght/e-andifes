@@ -24,7 +24,7 @@ especialista
 # Variações de especialista
 gestor_andifes
 coord_administrativo
-gestor_ofertas
+gestor_oferta
 docente_orientador
 
 instituicao_ensino_superior
