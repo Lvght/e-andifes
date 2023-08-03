@@ -5,7 +5,9 @@ __tipos
 email
 telefone
 endereco
+curso
 turma_ofertada_idioma
+
 
 # Entidade principal. Representa o usuário.
 pessoa
@@ -26,12 +28,7 @@ gestor_andifes
 coord_administrativo
 gestor_oferta
 docente_orientador
-<<<<<<< HEAD
 docente_especialista
-
-
-=======
->>>>>>> c7093c17d4ee138918db2b6c9eabde0486442feb
 instituicao_ensino_superior
 sigla_instituicao_superior
 coord_admin
@@ -53,11 +50,6 @@ email_requisitante_adesao_rede_andifes
 aluno_graduacao
 parceiro
 
-<<<<<<< HEAD
-curso
-
-# end
-=======
 repositorio_cursista
 professor_isf_edita_repositorio
 
@@ -65,4 +57,3 @@ professor_isf_edita_repositorio
 orientador_orienta_aluno_graduacao
 
 # end
->>>>>>> c7093c17d4ee138918db2b6c9eabde0486442feb

@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS docente_especialista
+CREATE TABLE IF NOT EXISTS docente_especialista  
 (
     cpf VARCHAR(11) PRIMARY KEY,
     disponibilidade VARCHAR(100),
