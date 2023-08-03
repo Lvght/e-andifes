@@ -4,6 +4,7 @@ __tipos
 
 email
 telefone
+endereco
 turma_ofertada_idioma
 
 # Entidade principal. Representa o usuário.
@@ -36,7 +37,9 @@ ficha_inscricao_oferta_coletiva
 requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 aluno_graduacao
+parceiro
 gestor_oferta_coletiva
 disciplina_especializacao
 turma_disciplina_especializacao
+
 # end
