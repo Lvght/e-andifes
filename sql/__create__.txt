@@ -23,6 +23,8 @@ especialista
 
 # Variações de especialista
 gestor_andifes
+coord_administrativo
+gestor_ofertas
 docente_orientador
 
 instituicao_ensino_superior
