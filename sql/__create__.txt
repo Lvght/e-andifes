@@ -5,8 +5,7 @@ __tipos
 email
 telefone
 endereco
-curso
-turma_ofertada_idioma
+
 
 
 # Entidade principal. Representa o usuário.
@@ -42,6 +41,8 @@ deferimento_edital
 ficha_adesao_rede_andifes
 ficha_credenciamento_especialista
 professor_isf
+curso
+turma_ofertada_idioma
 ficha_credenciamento_professor_isf
 ficha_adesao_docente_oferta_coletiva
 ficha_inscricao_oferta_coletiva
