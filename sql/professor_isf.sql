@@ -4,7 +4,7 @@
 CREATE TABLE professor_isf (
     cpf CHAR(11) PRIMARY KEY,
     id_ficha_base INTEGER NOT NULL,
-    categoria VARCHAR(25) NOT NULL,
+    categoria CATEGORIA_PROFESSOR_ISF NOT NULL,
 
     CONSTRAINT fk_pessoa 
     	FOREIGN KEY (cpf) 
