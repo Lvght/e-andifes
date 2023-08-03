@@ -1,0 +1,35 @@
+name: Create DB
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Docker Compose Up
+      run: |
+        sudo mkdir /var/logs && sudo chmod 777 /var/logs && \
+        sudo chown -R $USER:$USER /var/logs && \
+        docker-compose -f docker-compose.yml up -d --build
+
+    - name: Test if container is running
+      run: |
+        sleep 60 && \
+        if ! docker-compose -f docker-compose.yml ps | grep Up; then
+          docker compose -f docker-compose.yml logs
+          exit 1
+        fi
+
+    - name: Shutdown containers
+      run: |
+        docker-compose -f docker-compose.yml down

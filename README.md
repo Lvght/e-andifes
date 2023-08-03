@@ -28,3 +28,13 @@ docker compose down -v
 Adicione os scripts SQL à pasta `sql`. Em seguida, adicione os nomes dos arquivos ao arquivo [__create__.txt](sql/__create__.txt) **na ordem em que devem ser criados**.
 
 Você deve recriar o ambiente de desenvolvimento para que as mudanças nas tabelas tenham efeito.
+
+## Como visualizar o gráfico do banco de dados
+
+Execute em seu terminal:
+
+```bash
+./diagram.sh
+```
+
+Em seguida, abra o endereço http://localhost:8000 no seu navegador.

@@ -41,3 +41,4 @@ CREATE TABLE repositorio_cursista (
         UNIQUE (codigo, dia_semana, horario_inicio, idioma, codigo_curso, nome_curso)
     
 );
+
