@@ -24,8 +24,13 @@ especialista
 # Variações de especialista
 gestor_andifes
 docente_orientador
-
 instituicao_ensino_superior
+sigla_instituicao_superior
+coord_admin
+especialista_atua_em_ies
+ies_possui_coord_admin
+laboratorio_isf
+nucleo_linguistico
 edital
 ficha_base
 deferimento_edital
