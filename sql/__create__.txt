@@ -17,6 +17,7 @@ pessoa_email
 professor_isf
 aluno_comunidade_academica
 aluno_comunidade_academica_telefone
+cursista
 
 # Professores pós graduados credenciados à Rede Andifes
 especialista
