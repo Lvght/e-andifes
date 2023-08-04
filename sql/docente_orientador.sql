@@ -25,7 +25,7 @@ CREATE TABLE docente_orientador
 
     CONSTRAINT fk_coord_administrativo
         FOREIGN KEY (coord_administrativo)
-            REFERENCES coordenador_administrativo (cpf)
+            REFERENCES coordenador_administrativo (CPF)
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );

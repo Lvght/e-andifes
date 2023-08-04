@@ -4,14 +4,20 @@ CREATE TABLE instituicao_ensino_superior
     nome_completo      VARCHAR(100) NOT NULL,
     campus             VARCHAR(50) NOT NULL,
     tem_NucLi          BOOLEAN NOT NULL,
-    e_polo             BOOLEAN NOT NULL, -- o uso de acentos em nomes de coluna pode levar a problemas, então mudei "é_polo" para "e_polo"
+    e_polo             BOOLEAN NOT NULL, 
     contato_reitoria   VARCHAR(50),
-    IES_sigla          VARCHAR(10) NOT NULL,
+    FK_IES_sigla          VARCHAR(10) NOT NULL,
     FK_id_endereco     INT NOT NULL,
 
-    CONSTRAINT fk_endereco_ies
+    CONSTRAINT fk_ies_sigla
+        FOREIGN KEY (FK_IES_sigla)
+            REFERENCES sigla_instituicao_superior (sigla)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE,
+            
+     CONSTRAINT fk_endereco
         FOREIGN KEY (FK_id_endereco)
-            REFERENCES endereco (id)
+            REFERENCES endereco  (id)
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
