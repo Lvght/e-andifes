@@ -8,7 +8,6 @@ endereco
 turma_ofertada_idioma
 
 # Entidade principal. Representa o usuário.
-endereco
 pessoa
 
 # Tabela de relacionamento entre pessoa e email.
@@ -49,12 +48,10 @@ requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 aluno_graduacao
 parceiro
-material
 repositorio_cursista
+material
 orientador_orienta_cursista
 
-
-repositorio_cursista
 professor_isf_edita_repositorio
 
 # Tabela que representa o relacionamento N para N entre o 'docente_orientador' e o 'aluno_graduacao'

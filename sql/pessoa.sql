@@ -9,11 +9,11 @@ CREATE TABLE pessoa
     numero_endereco VARCHAR(5) NOT NULL,
     rua varchar(50) NOT NULL,
     bairro VARCHAR(50) NOT NULL,
-    cep  CHAR(9) NOT NULL,
+    endereco_id  INTEGER NOT NULL,
 
-    CONSTRAINT fk_cep
-        FOREIGN KEY (cep)
-            REFERENCES endereco(cep)
+    CONSTRAINT fk_endereco
+        FOREIGN KEY (endereco_id)
+            REFERENCES endereco(id)
             ON DELETE RESTRICT 
             ON UPDATE NO ACTION 
 );
