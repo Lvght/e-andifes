@@ -23,7 +23,7 @@ especialista
 
 # Variações de especialista
 gestor_andifes
-coord_administrativo
+coordenador_administrativo
 gestor_oferta
 docente_orientador
 
@@ -31,7 +31,6 @@ docente_orientador
 docente_especialista
 instituicao_ensino_superior
 sigla_instituicao_superior
-coord_admin
 especialista_atua_em_ies
 ies_possui_coord_admin
 laboratorio_isf
