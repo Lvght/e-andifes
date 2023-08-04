@@ -29,8 +29,8 @@ docente_orientador
 
 
 docente_especialista
-instituicao_ensino_superior
 sigla_instituicao_superior
+instituicao_ensino_superior
 especialista_atua_em_ies
 ies_possui_coord_admin
 laboratorio_isf
