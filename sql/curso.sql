@@ -1,4 +1,6 @@
 CREATE TABLE curso(
-codigo_curso VARCHAR(16) PRIMARY KEY,
-
+    id SERIAL PRIMARY KEY,
+    idioma IDIOMA NOT NULL,
+    codigo_curso INTEGER NOT NULL,
+    nome_curso VARCHAR(100) NOT NULL
 );

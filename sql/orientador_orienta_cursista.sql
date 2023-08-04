@@ -12,5 +12,8 @@ CREATE TABLE orientador_orienta_cursista(
 		FOREIGN KEY (cpf_cursista)
 			REFERENCES cursista(cpf)
 				ON DELETE CASCADE
-				ON UPDATE CASCADE
+				ON UPDATE CASCADE,
+
+	CONSTRAINT pk_orientador_cursista
+		PRIMARY KEY(cpf_cursista, cpf_orientador)
 );
