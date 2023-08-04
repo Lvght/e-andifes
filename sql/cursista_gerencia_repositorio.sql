@@ -2,11 +2,9 @@ CREATE TABLE cursista_gerencia_repositorio(
     id SERIAL PRIMARY KEY,
     cpf_cursista char(11),
     codigo_repositorio VARCHAR(50),
-    dia_semana DIASEMANA,
-    horario_inicio DATETIME,
     idioma IDIOMA NOT NULL,
-    codigo_curso INTEGER,
-    nome_curso VARCHAR(100) NOT NULL,
+    id_turma INTEGER NOT NULL,
+    id_curso INTEGER NOT NULL,
     horas_praticas_validadas INTEGER,
     horas_praticas_solicitadas INTEGER,
 
@@ -22,13 +20,17 @@ CREATE TABLE cursista_gerencia_repositorio(
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
-    CONSTRAINT fk_codigo_curso
-        FOREIGN KEY codigo_curso
-            REFERENCES curso(codigo_curso)
+
+    CONSTRAINT fk_id_turma
+        FOREIGN KEY codigo_turma
+            REFERENCES turma_ofertada_idioma(id)
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
-    CONSTRAINT chave_unica
-        UNIQUE (codigo_repositorio, dia_semana, horario_inicio, idioma, codigo_curso, nome_curso)
+    CONSTRAINT fk_id_curso
+        FOREIGN KEY codigo_curso
+            REFERENCES curso(id)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE
     
 );

@@ -5,8 +5,6 @@ __tipos
 email
 telefone
 endereco
-curso
-turma_ofertada_idioma
 
 
 # Entidade principal. Representa o usuário.
