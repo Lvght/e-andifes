@@ -5,7 +5,7 @@ __tipos
 email
 telefone
 endereco
-turma_ofertada_idioma
+
 
 # Entidade principal. Representa o usuário.
 pessoa
@@ -14,23 +14,36 @@ pessoa
 pessoa_email
 
 # Variações de pessoa
-professor_isf
 aluno_comunidade_academica
 aluno_comunidade_academica_telefone
+cursista
 
 # Professores pós graduados credenciados à Rede Andifes
 especialista
 
 # Variações de especialista
 gestor_andifes
+coord_administrativo
+gestor_oferta
 docente_orientador
 
+
+docente_especialista
 instituicao_ensino_superior
+sigla_instituicao_superior
+coord_admin
+especialista_atua_em_ies
+ies_possui_coord_admin
+laboratorio_isf
+nucleo_linguistico
 edital
 ficha_base
 deferimento_edital
 ficha_adesao_rede_andifes
 ficha_credenciamento_especialista
+professor_isf
+curso
+turma_ofertada_idioma
 ficha_credenciamento_professor_isf
 ficha_adesao_docente_oferta_coletiva
 ficha_inscricao_oferta_coletiva
@@ -38,5 +51,21 @@ requisitante_adesao_rede_andifes
 email_requisitante_adesao_rede_andifes
 aluno_graduacao
 parceiro
+repositorio_cursista
+material
+orientador_orienta_cursista
+
+professor_isf_edita_repositorio
+
+# Tabela que representa o relacionamento N para N entre o 'docente_orientador' e o 'aluno_graduacao'
+orientador_orienta_aluno_graduacao
+disciplina_especializacao
+turma_disciplina_especializacao
+
+# Tabelas de relacionamento
+cursista_adere_oc
+cursista_cursa_especializacao
+cursista_gerencia_repositorio
+dia_aula_turma
 
 # end
