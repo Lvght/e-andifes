@@ -1,6 +1,6 @@
 CREATE TABLE cursista_cursa_especializacao(
     id SERIAL PRIMARY KEY,
-    codigo_turma_especializacao VARCHAR(16),
+    codigo_turma_especializacao SERIAL,
     cpf_cursista CHAR(11),
     horas_praticas_validadas INTEGER,
     horas_praticas_solicitadas INTEGER,
