@@ -4,7 +4,7 @@ CREATE TABLE turma_disciplina_especializacao (
   data_inicio  DATE NOT NULL,
   data_fim DATE NULL, 
 
-  CONSTRAINT disc_especializacao
+  CONSTRAINT disciplina_especializacao
         FOREIGN KEY (id_disc_especilizacao)
             REFERENCES disciplina_especializacao (id)
                 ON DELETE CASCADE
