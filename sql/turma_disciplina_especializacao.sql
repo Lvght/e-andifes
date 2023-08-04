@@ -1,6 +1,6 @@
 CREATE TABLE turma_disciplina_especializacao (
-  id_disc_especilizacao SERIAL,
-  codigo_turma SERIAL,
+  id_disc_especilizacao INTEGER NOT NULL,
+  codigo_turma INTEGER NOT NULL UNIQUE,
   data_inicio  DATE NOT NULL,
   data_fim DATE NULL, 
 
