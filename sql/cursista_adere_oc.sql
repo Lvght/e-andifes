@@ -1,7 +1,6 @@
 CREATE TABLE cursista_adere_oc (
-    cpf_cursista VARCHAR(11) NOT NULL,
-    data_inicio DATE NOT NULL,
-    titulo VARCHAR(20) NOT NULL,
+    cpf_cursista CHAR(11) NOT NULL,
+    id_turma INTEGER NOT NULL,
 
     CONSTRAINT fk_CPF
         FOREIGN KEY (cpf_cursista)
@@ -9,15 +8,12 @@ CREATE TABLE cursista_adere_oc (
         ON DELETE CASCADE
         ON UPDATE CASCADE,
 
-    CONSTRAINT fk_data_inicio
-        FOREIGN KEY (data_inicio)
-        REFERENCES oferta_coletiva (data_inicio)
+    CONSTRAINT fk_turma_ofertada_idioma
+        FOREIGN KEY (id_turma)
+        REFERENCES turma_ofertada_idioma (id)
         ON DELETE CASCADE
-        ON UPDATE CASCADE,
+        ON UPDATE CASCADE
+);
 
-    CONSTRAINT fk_titulo
-        FOREIGN KEY (titulo)
-        REFERENCES oferta_coletiva (titulo)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
-)
+COMMENT ON TABLE cursista_adere_oc
+    IS 'Tabela que representa a adesão de um cursista a uma oferta coletiva.';

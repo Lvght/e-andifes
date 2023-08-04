@@ -22,3 +22,6 @@ CREATE TABLE turma_ofertada_idioma
             ON DELETE CASCADE
             ON UPDATE CASCADE
 );
+
+COMMENT ON TABLE turma_ofertada_idioma
+    IS 'Tabela que chamávamos de *Oferta Coletiva*';

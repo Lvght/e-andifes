@@ -9,28 +9,26 @@ CREATE TABLE cursista_gerencia_repositorio(
     horas_praticas_solicitadas INTEGER,
 
     CONSTRAINT fk_cpf_cursista
-        FOREIGN KEY cpf_cursista
+        FOREIGN KEY (cpf_cursista)
             REFERENCES pessoa(cpf)
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
     CONSTRAINT fk_codigo_repositorio
-        FOREIGN KEY codigo_repositorio
+        FOREIGN KEY (codigo_repositorio)
             REFERENCES repositorio_cursista(codigo)
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
-
     CONSTRAINT fk_id_turma
-        FOREIGN KEY codigo_turma
+        FOREIGN KEY (id_turma)
             REFERENCES turma_ofertada_idioma(id)
             ON DELETE CASCADE
             ON UPDATE CASCADE,
 
     CONSTRAINT fk_id_curso
-        FOREIGN KEY codigo_curso
+        FOREIGN KEY (id_curso)
             REFERENCES curso(id)
             ON DELETE CASCADE
             ON UPDATE CASCADE
-    
 );
