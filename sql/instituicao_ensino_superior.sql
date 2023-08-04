@@ -6,12 +6,12 @@ CREATE TABLE instituicao_ensino_superior
     tem_NucLi          BOOLEAN NOT NULL,
     e_polo             BOOLEAN NOT NULL, 
     contato_reitoria   VARCHAR(50),
-    FK_IES_sigla          VARCHAR(10) NOT NULL,
+    FK_IES_sigla       INT NOT NULL,
     FK_id_endereco     INT NOT NULL,
 
     CONSTRAINT fk_ies_sigla
         FOREIGN KEY (FK_IES_sigla)
-            REFERENCES sigla_instituicao_superior (sigla)
+            REFERENCES sigla_instituicao_superior (id)
             ON DELETE CASCADE
             ON UPDATE CASCADE,
             
