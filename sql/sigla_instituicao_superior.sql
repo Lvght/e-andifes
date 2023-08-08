@@ -1,10 +1,11 @@
 CREATE TABLE sigla_instituicao_superior (
-    FK_ies_id INT NOT NULL,
-    IES_sigla VARCHAR(10),
-
-    CONSTRAINT fk_instituicao_ensino_superior
-        FOREIGN KEY (FK_ies_id)
-            REFERENCES instituicao_ensino_superior (id)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE
+    id SERIAL PRIMARY KEY,
+    sigla VARCHAR(10) NOT NULL
 );
+
+COMMENT ON TABLE sigla_instituicao_superior
+    IS 'Uma ies pode ser cadastrada mais de uma vez,'
+    'dado que ela pode ter mais de um campus. Como esses campi'
+    'tem a mesma sigla, criamos essa tabela separada. Alem disso,'
+    'foi adicionado um surrogate, pois universidades diferentes podem ter'
+    'a mesma sigla';

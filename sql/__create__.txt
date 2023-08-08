@@ -23,15 +23,14 @@ especialista
 
 # Variações de especialista
 gestor_andifes
-coord_administrativo
+coordenador_administrativo
 gestor_oferta
 docente_orientador
 
 
 docente_especialista
-instituicao_ensino_superior
 sigla_instituicao_superior
-coord_admin
+instituicao_ensino_superior
 especialista_atua_em_ies
 ies_possui_coord_admin
 laboratorio_isf
@@ -68,5 +67,6 @@ cursista_adere_oc
 cursista_cursa_especializacao
 cursista_gerencia_repositorio
 dia_aula_turma
+gestor_oferta_coletiva
 
 # end
