@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   database:
-    build: .
+    build: ./database
     ports:
       - "5432:5432"
     environment:
@@ -10,6 +10,7 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
         - ./logs:/var/logs
+        - ./database/sql:/opt/sql
   
 
   pgadmin:
@@ -20,6 +21,6 @@ services:
     ports:
       - "5050:80"
     volumes:
-      - ./config/pgadmin-server.json:/pgadmin4/servers.json
+      - ./database/config/pgadmin-server.json:/pgadmin4/servers.json
     depends_on:
       - database

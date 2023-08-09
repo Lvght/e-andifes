@@ -29,7 +29,7 @@ Write-Host "`n`n"
 
 while ($sair -eq $false) {
     docker run --rm -v "$(Get-Location)\schema:/output" `
-        -v "$(Get-Location)\config\schemaspy.conf:/schemaspy.properties" `
+        -v "$(Get-Location)\database\config\schemaspy.conf:/schemaspy.properties" `
         --network e-andifes_default schemaspy/schemaspy:latest 1> $null
 
     $t = Get-Date -Format "HH:mm:ss"
