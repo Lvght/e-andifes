@@ -1,3 +1,5 @@
 logs/
 .idea/
 schema/
+__pycache__/
+.venv/

@@ -31,6 +31,8 @@ Você deve recriar o ambiente de desenvolvimento para que as mudanças nas tabel
 
 ## Como visualizar o gráfico do banco de dados
 
+### Linux
+
 Execute em seu terminal:
 
 ```bash
@@ -38,3 +40,13 @@ Execute em seu terminal:
 ```
 
 Em seguida, abra o endereço http://localhost:8000 no seu navegador.
+
+### Windows
+
+Execute em seu PowerShell:
+
+```powershell
+.\diagram.ps1 -persistir $true
+```
+
+Seu navegador abrirá automaticamente. Se `-persistir` for `$true`, o programa reconstruirá o site automaticamente a cada alguns segundos. Útil se estiver fazendo alterações no banco de dados.
