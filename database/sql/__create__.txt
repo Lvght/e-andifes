@@ -27,6 +27,9 @@ coordenador_administrativo
 gestor_oferta
 docente_orientador
 
+#FIX
+email_institucional
+telefone_institucional
 
 docente_especialista
 sigla_instituicao_superior
