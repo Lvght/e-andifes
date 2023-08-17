@@ -2,6 +2,9 @@ CREATE TABLE cursista_adere_oc (
     cpf_cursista CHAR(11) NOT NULL,
     id_turma INTEGER NOT NULL,
 
+    CONSTRAINT pk_cursista_adere_oc
+        PRIMARY KEY (cpf_cursista, id_turma),
+
     CONSTRAINT fk_CPF
         FOREIGN KEY (cpf_cursista)
         REFERENCES cursista (cpf)
