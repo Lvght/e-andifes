@@ -1,3 +1,5 @@
 {
     "typescript.tsdk": "interface/e-andifes/node_modules/typescript/lib",
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2
 }
