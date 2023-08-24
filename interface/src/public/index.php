@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * Este arquivo carrega o Twig e envia o template HTML da página inicial.
  * Ele também checa se há memsagens de erro enviadas através do método GET.
@@ -8,10 +6,7 @@
 
 
 session_start();
-require_once '/vendor/autoload.php';
-
-$loader = new \Twig\Loader\FilesystemLoader('templates');
-$twig = new \Twig\Environment($loader);
+include $_ENV['HOME'] . '/helpers/twig.php';
 
 $template = $twig->load('index.twig');
 
