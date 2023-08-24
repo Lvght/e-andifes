@@ -1,6 +1,7 @@
 {
     "php.stubs": [
         "*",
-        "pgsql"
+        "pgsql",
+        "twig"
     ]
 }
