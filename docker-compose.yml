@@ -1,6 +1,16 @@
 version: '3.7'
 
 services:
+  interface:
+    build: ./interface
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./interface/src:/var/www/html
+    depends_on:
+      - database
+
+
   database:
     build: ./database
     ports:
@@ -11,7 +21,7 @@ services:
     volumes:
         - ./logs:/var/logs
         - ./database/sql:/opt/sql
-  
+
 
   pgadmin:
     image: dpage/pgadmin4
