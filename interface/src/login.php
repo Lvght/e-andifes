@@ -14,7 +14,9 @@ $connection = @pg_connect($connString);
 
 if (! $connection) {
     // Se não conseguir conectar, redireciona para a página de login com uma mensagem de erro.
-    header("Location: index.php?e=500");
+    // Eu inventei esse valor "500", poderia ser qualquer coisa.
+    $erro = "500";
+    header("Location: index.php?erro={$erro}");
 } else {
     // Se conseguir conectar, redireciona para a página de dashboard.
     $_SESSION['username'] = $username;

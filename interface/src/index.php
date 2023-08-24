@@ -1,11 +1,24 @@
 <?php
-session_start();
 
+
+/**
+ * Este arquivo carrega o Twig e envia o template HTML da página inicial.
+ * Ele também checa se há memsagens de erro enviadas através do método GET.
+ */
+
+
+session_start();
 require_once '/vendor/autoload.php';
 
 $loader = new \Twig\Loader\FilesystemLoader('templates');
 $twig = new \Twig\Environment($loader);
 
 $template = $twig->load('index.twig');
-$hasError = $_GET['e'];
-echo $template->render(['message' => 'test', 'hasError' => $hasError]);
+
+// Verifica se essa página foi invocada por outra com uma mensagem de erro.
+$errorMessage = null;
+if (isset($_GET['erro'])) {
+    $errorMessage = 'Ocorreu um erro ao se conectar com o banco de dados...';
+}
+
+echo $template->render(['message' => 'test', 'errorMessage' => $errorMessage]);

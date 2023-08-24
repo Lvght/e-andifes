@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+</head>
+<body>
+
+    <h1>Soma</h1>
+
+    {% if resultado %}
+        <h2>Resultado: {{ resultado }}</h2>
+    {% endif %}
+
+    <form action="soma.php" method="POST">
+        <input type="number" name="num1" placeholder="Digite o primeiro número" required>
+        <input type="number" name="num2" placeholder="Digite o segundo número" required>
+        <input type="submit" value="Somar">
+    </form>
+</body>
+</html>

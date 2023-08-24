@@ -1,28 +1,11 @@
-<?php include "helpers/inject.php"; ?>
+<?php
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Olá, <?php echo $_SESSION['username']; ?></h1>
+include "helpers/inject.php";
 
-    <?php
-        // Define qual a query a ser executada.
-        $sql = "SELECT * FROM endereco";
+require_once '/vendor/autoload.php';
 
-        // Roda a query no banco.
-        // $connection é definida no [helpers/inject.php]
-        $rawResult = pg_query($connection, $sql);
-        $results = pg_fetch_all($rawResult);
+$loader = new \Twig\Loader\FilesystemLoader('templates');
+$twig = new \Twig\Environment($loader);
 
-        // Renderiza os resultados.
-        foreach ($results as $result) {
-            echo "<p>" . json_encode($result, JSON_UNESCAPED_UNICODE) . "</p>";
-        }
-    ?>
-</body>
-</html>
+$template = $twig->load('dashboard.twig');
+echo $template->render(['username' => $_SESSION['username']]);
