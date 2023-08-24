@@ -1,0 +1,8 @@
+# Define a ordem de criação de tipos customizados.
+
+genero
+dia_semana
+idioma
+categoria_professor_isf
+
+# end

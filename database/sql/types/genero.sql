@@ -1,0 +1,1 @@
+CREATE TYPE GENERO AS ENUM ('M', 'F', 'O');
