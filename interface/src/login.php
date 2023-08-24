@@ -14,8 +14,7 @@ $connection = @pg_connect($connString);
 
 if (! $connection) {
     // Se não conseguir conectar, redireciona para a página de login com uma mensagem de erro.
-    $_SESSION['login_error'] = "Usuário ou senha incorretos.";
-    header("Location: index.php");
+    header("Location: index.php?e=500");
 } else {
     // Se conseguir conectar, redireciona para a página de dashboard.
     $_SESSION['username'] = $username;
