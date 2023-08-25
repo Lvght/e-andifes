@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+
+		<style>
+			table,
+			th,
+			td {
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Olá, {{ username }}</h1>
+
+		<a href="../soma.php">Faça uma soma usando um procedimento do banco de dados</a>
+
+		<hr>
+
+		<h2>Pessoas cadastradas no banco de dados</h2>
+		<table style="padding: 2px">
+			<tr>
+        <th><input type="checkbox"> </th>
+				{% for k in keys %}
+					<th>{{ k }}</th>
+				{% endfor %}
+			</tr>
+
+			{% for pessoa in pessoas %}
+				<tr>
+          <td><input type="checkbox"> </td>
+					{% for k in keys %}
+						<td>{{ pessoa[k] }}</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>

@@ -1,0 +1,1 @@
+CREATE TYPE IDIOMA AS ENUM('JAP', 'ING', 'ITA', 'PT', 'ESP', 'ALE', 'FRA');

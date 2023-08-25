@@ -1,0 +1,6 @@
+# Use o prefixo "pr_" para procedimentos, e "fn_" para funções.
+
+pr_hello_world
+fn_soma
+
+# end
