@@ -1,6 +1,8 @@
 # E-Andifes
 
-Solução 3
+> Trabalho para a disciplina de Projeto e Implementação de Banco de Dados (Grupo 3).
+
+Este trabalho não possui nenhum vínculo oficial com a Andifes.
 
 [![Abrir cópia no draw.io](https://img.shields.io/badge/abrir-abrir?logo=diagramsdotnet&label=draw.io&link=https%3A%2F%2Fapp.diagrams.net%2F%23Uhttps%3A%2F%2Fraw.githubusercontent.com%2FAlynva%2Frede-andifes-isf%2Fmain%2FProjeto%2520e%2520Implementa%25C3%25A7%25C3%25A3o%2520de%2520Banco%2520de%2520Dados.drawio)
 ](https://app.diagrams.net/#Uhttps://raw.githubusercontent.com/Lvght/e-andifes/main/der/Projeto%20e%20Implementa%C3%A7%C3%A3o%20de%20Banco%20de%20Dados.drawio)
@@ -10,36 +12,29 @@ Solução 3
 Execute em seu terminal:
 
 ```bash
-docker compose up -d
+docker compose down -v && docker compose up
 ```
 
-No Linux, na primeira execução, é possível que seja necessário criar um diretório para os logs do banco. Faça isso com o comando:
+## Como adicionar novos artefatos?
 
-```bash
-mkdir logs
-chmod 777 logs
-```
+Dentro de `database/sql`, há várias pastas e, em cada uma, um arquivo chamado `__create__`. Você deve adicionar à pasta correspondente o arquivo `.sql` e então mencionar o nome dele no arquivo create **na ordem em que o artefato deve ser criado**.
 
-Para remover o ambiente, execute:
+## Como adicionar novos dados?
 
-```bash
-docker compose down -v
-```
+Você pode adicionar dados de teste manualmente, mas é recomendado que você faça isso usando nosso mecanismo de *seeding*. Se optar por inserir manualmente, irá perder seus dados ao reconstruir o banco, operação comum durante o desenvolvimento.
 
-## Como adicionar novas tabelas
-
-Adicione os scripts SQL à pasta `sql`. Em seguida, adicione os nomes dos arquivos ao arquivo [__create__.txt](sql/__create__.txt) **na ordem em que devem ser criados**.
-
-Você deve recriar o ambiente de desenvolvimento para que as mudanças nas tabelas tenham efeito.
+Portanto, a maneira recomendada é inserir os dados criando um arquivo `nome_da_tabela.php` na pasta `interface/seed` e então mencionar o `nome_da_tabela` no arquivo `interface/seed/__create__.php`.
 
 ## Como visualizar o gráfico do banco de dados
+
+Com o banco de dados em execução, rode os seguintes comandos:
 
 ### Linux
 
 Execute em seu terminal:
 
 ```bash
-./diagram.sh
+./scrips/diagram.sh
 ```
 
 Em seguida, abra o endereço http://localhost:8000 no seu navegador.
@@ -49,7 +44,7 @@ Em seguida, abra o endereço http://localhost:8000 no seu navegador.
 Execute em seu PowerShell:
 
 ```powershell
-.\diagram.ps1 -persistir $true
+.\scripts\diagram.ps1 -persistir $true
 ```
 
 Seu navegador abrirá automaticamente. Se `-persistir` for `$true`, o programa reconstruirá o site automaticamente a cada alguns segundos. Útil se estiver fazendo alterações no banco de dados.
