@@ -2,8 +2,6 @@
 
 > Trabalho para a disciplina de Projeto e Implementação de Banco de Dados (Grupo 3).
 
-Este trabalho não possui nenhum vínculo oficial com a Andifes.
-
 [![Abrir cópia no draw.io](https://img.shields.io/badge/abrir-abrir?logo=diagramsdotnet&label=draw.io&link=https%3A%2F%2Fapp.diagrams.net%2F%23Uhttps%3A%2F%2Fraw.githubusercontent.com%2FAlynva%2Frede-andifes-isf%2Fmain%2FProjeto%2520e%2520Implementa%25C3%25A7%25C3%25A3o%2520de%2520Banco%2520de%2520Dados.drawio)
 ](https://app.diagrams.net/#Uhttps://raw.githubusercontent.com/Lvght/e-andifes/main/der/Projeto%20e%20Implementa%C3%A7%C3%A3o%20de%20Banco%20de%20Dados.drawio)
 
@@ -34,7 +32,7 @@ Com o banco de dados em execução, rode os seguintes comandos:
 Execute em seu terminal:
 
 ```bash
-./scrips/diagram.sh
+./scripts/diagram.sh
 ```
 
 Em seguida, abra o endereço http://localhost:8000 no seu navegador.
