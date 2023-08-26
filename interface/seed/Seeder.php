@@ -9,7 +9,7 @@ class Seeder {
         $this->connection = getConnection("postgres", "postgres");
     }
 
-    public function insert($tableName, $data) {
+    public function insert($tableName, $data): bool {
         $sql = "INSERT INTO $tableName (";
         $keys = array_keys($data[0]);
     
@@ -27,6 +27,10 @@ class Seeder {
                 $value = $row[$key] ?? null;
                 if ($value === null)
                     $sql .= "NULL, ";
+                elseif ($value === true)
+                    $sql .= "TRUE, ";
+                elseif ($value === false)
+                    $sql .= "FALSE, ";
                 else
                     $sql .= "'$value', ";
             }
@@ -36,6 +40,7 @@ class Seeder {
         }
     
         $sql = substr($sql, 0, -2); 
-        pg_query($this->connection, $sql);
+        $result = pg_query($this->connection, $sql);
+        return $result !== false;
     }
 }
