@@ -1,4 +1,3 @@
-drop view if exists view_pessoa;
 CREATE VIEW view_admin_pessoa AS
 SELECT cpf,
        nome,
@@ -15,5 +14,3 @@ SELECT cpf,
        pais as endereco_pais
 FROM pessoa
          INNER JOIN endereco ON pessoa.endereco_id = endereco.id;
-
-select * from view_admin_pessoa;
