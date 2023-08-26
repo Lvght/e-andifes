@@ -1,28 +1,24 @@
 <?php
 
 return [
+    // A primeira instância precisa ter todas as informações da tabela.
     [
         'cpf' => '123456789',
-        'nome' => 'Nome Um',
-        'sobrenome' => 'Sobrenome Um',
-        'nascimento_dia' => 30,
-        'nascimento_mes' => 12,
-        'nascimento_ano' => 1970,
-        'numero_endereco' => '1',
-        'rua' => 'Rua Um',
-        'bairro' => 'Bairro Um',
+        'nome_registro' => 'Nome1 Sobrenome1',
+        'nome_social' => 'Nomesocial1 Sobrenome1',
+        'nascimento' => '1970-12-30',
+        'endereco_numero' => '1',
+        'endereco_rua' => 'Rua Um',
+        'endereco_bairro' => 'Bairro Um',
         'endereco_id' => 1
     ],
     [
         'cpf' => '987654321',
-        'nome' => 'Nome Dois',
-        'sobrenome' => 'Sobrenome Dois',
-        'nascimento_dia' => 31,
-        'nascimento_mes' => 12,
-        'nascimento_ano' => 1970,
-        'numero_endereco' => '2',
-        'rua' => 'Rua Dois',
-        'bairro' => 'Bairro Dois',
+        'nome_registro' => 'Nome2 Sobrenome2',
+        'nascimento' => '1970-12-01',
+        'endereco_numero' => '2',
+        'endereco_rua' => 'Rua Dois',
+        'endereco_bairro' => 'Bairro Dois',
         'endereco_id' => 2
     ]
 ];

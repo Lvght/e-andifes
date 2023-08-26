@@ -20,23 +20,32 @@
 
 		<hr>
 
-		<h2>Pessoas cadastradas no banco de dados</h2>
-		<table style="padding: 2px">
-			<tr>
-        <th><input type="checkbox"> </th>
-				{% for k in keys %}
-					<th>{{ k }}</th>
-				{% endfor %}
-			</tr>
+		{% if error %}
+			<h2 style="color: red">{{ error }}</h2>
+		{% endif %}
 
-			{% for pessoa in pessoas %}
+		{% if pessoas is not empty %}
+			<h2>Pessoas cadastradas no banco de dados</h2>
+
+			<table style="padding: 2px">
 				<tr>
-          <td><input type="checkbox"> </td>
+					<th><input type="checkbox"> </th>
 					{% for k in keys %}
-						<td>{{ pessoa[k] }}</td>
+						<th>{{ k }}</th>
 					{% endfor %}
 				</tr>
-			{% endfor %}
-		</table>
+
+				{% for pessoa in pessoas %}
+					<tr>
+						<td><input type="checkbox"> </td>
+						{% for k in keys %}
+							<td>{{ pessoa[k] }}</td>
+						{% endfor %}
+					</tr>
+				{% endfor %}
+			</table>
+		{% endif %}
+
+	<a href="logout.php">Sair</a>
 	</body>
 </html>
