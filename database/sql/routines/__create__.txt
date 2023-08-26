@@ -3,4 +3,7 @@
 pr_hello_world
 fn_soma
 
+fn_has_system_access
+pr_cadastra_pessoa
+
 # end

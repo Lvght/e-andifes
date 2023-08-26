@@ -22,9 +22,15 @@ class Seeder {
     
         foreach ($data as $row) {
             $sql .= "(";
-            foreach ($row as $value) {
-                $sql .= "'$value', ";
+
+            foreach ($keys as $key) {
+                $value = $row[$key] ?? null;
+                if ($value === null)
+                    $sql .= "NULL, ";
+                else
+                    $sql .= "'$value', ";
             }
+            
             $sql = substr($sql, 0, -2);
             $sql .= "), ";
         }

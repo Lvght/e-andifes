@@ -3,17 +3,20 @@
 echo -e "Start...\n";
 
 declare -a segmentos=(
-  [0]="types"
-  [1]="tables"
-  [2]="views"
-  [3]="functions"
-  [4]="triggers"
-  [5]="extra"
+  "preconfig"
+  "types"
+  "tables"
+  "routines"
+  "views"
+  "triggers"
+  "extra"
 );
 
-echo -e "2...\n";
+gcount=0;
 
 for s in "${segmentos[@]}"; do
+  lcount=0;
+
   echo -e "====================> $s\n";
   file="/opt/sql/$s/__create__.txt";
 
@@ -36,7 +39,16 @@ for s in "${segmentos[@]}"; do
       echo -e "ret code is $ret\n";
       exit 1;
     fi
+
+    lcount=$((lcount+1));
   done < "$file";
+
+  if [[ $s == 'preconfig' ]]; then
+    echo -e " $lcount hacks done.\n";
+  else
+    echo -e " $lcount objects created\n";
+    gcount=$((gcount+lcount));
+  fi
 done
 
 echo -e "
@@ -44,4 +56,5 @@ ____    ____ _  _ ___  _ ____ ____ ____
 |___ __ |__| |\ | |  \ | |___ |___ [__  
 |___    |  | | \| |__/ | |    |___ ___] 
 \n";
-echo -e "🎉 Database is ok. Happy hacking!\n";
+echo -e "🎉 Database is ok. Happy hacking!";
+echo -e "📊 $gcount objects created in total\n";

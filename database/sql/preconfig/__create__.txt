@@ -1,0 +1,7 @@
+# Configurações do banco de dados
+# que precisam ser executadas antes
+# dos demais itens.
+
+modify_routine_priv
+
+# end
