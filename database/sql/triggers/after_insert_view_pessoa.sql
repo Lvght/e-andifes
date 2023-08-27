@@ -6,11 +6,14 @@ $$
 DECLARE
     endereco_id integer;
     rec         record;
-    r           refcursor;
+    endc        refcursor;
+    telc        refcursor;
 BEGIN
-    OPEN r FOR SELECT * FROM endereco WHERE codigo_postal = NEW.endereco_codigo_postal
-                                        and pais = NEW.endereco_pais;
-    FETCH r INTO rec;
+    OPEN endc FOR SELECT *
+                  FROM endereco
+                  WHERE codigo_postal = NEW.endereco_codigo_postal
+                    and pais = NEW.endereco_pais;
+    FETCH endc INTO rec;
 
     IF NOT FOUND THEN
         INSERT INTO endereco (id, codigo_postal, cidade, estado, pais)
@@ -23,7 +26,7 @@ BEGIN
     ELSE
         endereco_id := rec.id;
     END IF;
-    CLOSE r;
+    CLOSE endc;
 
     INSERT INTO pessoa (cpf,
                         nome_registro,
