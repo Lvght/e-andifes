@@ -1,7 +1,7 @@
 INSERT INTO pessoa
 (cpf, nome_registro, nome_social, nascimento, endereco_numero, endereco_rua, endereco_bairro, endereco_id)
 
-VALUES ('12345678910', 'Administrador Andifes', NULL, '1990-01-01', '123A', 'Rua Paulista', 'Centro', 1),
+VALUES ('1', 'Administrador Andifes', NULL, '1990-01-01', '123A', 'Rua Paulista', 'Centro', 1),
        ('12345678911', 'Maria de Souza', 'Fernando de Souza', '1992-02-02', '045B', 'Rua do Rio', 'Copacabana', 2),
        ('12345678912', 'Carlos Pereira', NULL, '1985-03-03', '078C', 'Rua Mineira', 'Savassi', 3),
        ('12345678913', 'Luciana Menezes', NULL, '1978-04-04', '055D', 'Rua Brasiliense', 'Asa Norte', 4),

@@ -1,9 +1,9 @@
 INSERT INTO pessoa_telefone
 (cpf_pessoa, id_telefone, principal)
        -- Gestor
-VALUES ('12345678910', 1, TRUE),
-       ('12345678910', 2, FALSE),
-       ('12345678910', 3, FALSE),
+VALUES ('1', 1, TRUE),
+       ('1', 2, FALSE),
+       ('1', 3, FALSE),
 
        -- Outros usuários
        ('12345678911', 4, TRUE),

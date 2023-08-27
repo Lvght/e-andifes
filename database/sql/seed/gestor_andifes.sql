@@ -1,6 +1,6 @@
-TRUNCATE TABLE gestor_andifes CASCADE;
+CREATE ROLE "1" INHERIT LOGIN PASSWORD '123mudar';
 
 INSERT INTO gestor_andifes
     (cpf, papel_atuacao)
 
-VALUES ('12345678910', 'gestor');
+VALUES ('1', 'gestor');

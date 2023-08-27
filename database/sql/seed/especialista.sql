@@ -3,6 +3,6 @@ INSERT INTO especialista
  maior_titulacao)
 
 -- Gestor
-VALUES ('12345678910', 'Universidade', 'Maria Sobrenome', 'O que deveria ter aqui???', 'https://www.lattes.cnpq.br/',
+VALUES ('1', 'Universidade', 'Maria Sobrenome', 'O que deveria ter aqui???', 'https://www.lattes.cnpq.br/',
         'Professor', 'Letras',
         'Doutorado');

@@ -20,7 +20,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-        - ./logs:/var/logs
+        - ./logs:/tmp/logs
         - ./database/sql:/opt/sql
 
 

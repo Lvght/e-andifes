@@ -3,5 +3,6 @@
 # dos demais itens.
 
 modify_routine_priv
+create_roles
 
 # end
