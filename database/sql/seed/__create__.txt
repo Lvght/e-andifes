@@ -1,3 +1,10 @@
 endereco
+pessoa
+
+telefone
+pessoa_telefone
+
+especialista
+gestor_andifes
 
 # end

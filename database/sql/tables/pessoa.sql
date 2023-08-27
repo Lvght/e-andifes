@@ -31,6 +31,7 @@ CREATE TABLE pessoa
     ) STORED,
 
     nascimento DATE NOT NULL,
+    genero GENERO DEFAULT 'U',
     endereco_numero VARCHAR(5) NOT NULL,
     endereco_rua varchar(50) NOT NULL,
     endereco_bairro VARCHAR(50) NOT NULL,
