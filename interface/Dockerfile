@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y libpq-dev git unzip  && \
     docker-php-ext-enable xdebug
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
-RUN composer install
+
+# Para o caso do composer implicar com a origem de alguns pacotes.
+RUN yes | composer install
 
 CMD ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html/public"]
