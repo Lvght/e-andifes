@@ -28,7 +28,7 @@ BEGIN
 END;
 $$;
 
-CREATE OR REPLACE TRIGGER before_delete_pessoa_telefone
+CREATE OR REPLACE TRIGGER after_delete_pessoa_telefone
     AFTER DELETE
     ON pessoa_telefone
     FOR EACH ROW

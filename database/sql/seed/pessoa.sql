@@ -2,10 +2,10 @@ INSERT INTO pessoa
 (cpf, nome_registro, nome_social, nascimento, endereco_numero, endereco_rua, endereco_bairro, endereco_id)
 
 VALUES ('1', 'Administrador Andifes', NULL, '1990-01-01', '123A', 'Rua Paulista', 'Centro', 1),
-       ('12345678911', 'Maria de Souza', 'Fernando de Souza', '1992-02-02', '045B', 'Rua do Rio', 'Copacabana', 2),
-       ('12345678912', 'Carlos Pereira', NULL, '1985-03-03', '078C', 'Rua Mineira', 'Savassi', 3),
-       ('12345678913', 'Luciana Menezes', NULL, '1978-04-04', '055D', 'Rua Brasiliense', 'Asa Norte', 4),
-       ('12345678914', 'Roberto Alves', NULL, '2000-05-05', '99AE', 'Rua Gaúcha', 'Moinhos', 5),
+       ('2', 'Maria de Souza', 'Fernando de Souza', '1992-02-02', '045B', 'Rua do Rio', 'Copacabana', 2),
+       ('3', 'Carlos Pereira', NULL, '1985-03-03', '078C', 'Rua Mineira', 'Savassi', 3),
+       ('4', 'Luciana Menezes', NULL, '1978-04-04', '055D', 'Rua Brasiliense', 'Asa Norte', 4),
+       ('5', 'Roberto Alves', NULL, '2000-05-05', '99AE', 'Rua Gaúcha', 'Moinhos', 5),
        ('12345678915', 'Isabel Dias', NULL, '1993-06-06', '222F', 'Rua Pernambucana', 'Boa Viagem', 6),
        ('12345678916', 'Gabriel Santos', NULL, '1982-07-07', '11AG', 'Rua Baiana', 'Pelourinho', 7),
        ('12345678917', 'Daniela Oliveira', NULL, '1999-08-08', '333H', 'Rua Curitibana', 'Batel', 8),

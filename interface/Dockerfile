@@ -14,4 +14,4 @@ RUN apt-get update && apt-get install -y libpq-dev git && \
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 RUN composer install
 
-CMD ["php", "/var/www/html/seed/__entrypoint__.php"]
+CMD ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html/public"]

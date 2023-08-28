@@ -3,7 +3,7 @@
 include $_ENV['HOME'] . '/inc/inject.php';
 
 try {
-    $query = @pg_query(getConnection(), "SELECT * FROM pessoa");
+    $query = @pg_query(getConnection(), "SELECT * FROM view_admin_pessoa");
     if (!$query) throw new Exception("Não foi possível executar a query. " . pg_last_error(getConnection()) . "\n");
     $result = @pg_fetch_all($query);
 } catch (Throwable $e) {
