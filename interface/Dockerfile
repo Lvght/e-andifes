@@ -6,7 +6,7 @@ WORKDIR $HOME
 COPY ./src/composer.json /var/www/html
 COPY ./src/composer.lock /var/www/html
 
-RUN apt-get update && apt-get install -y libpq-dev git && \
+RUN apt-get update && apt-get install -y libpq-dev git unzip  && \
     docker-php-ext-install pgsql && \
     pecl install xdebug-3.2.1 && \
     docker-php-ext-enable xdebug
