@@ -1,3 +1,6 @@
-
+after_insert_update_pessoa_telefone
+after_insert_view_pessoa
+after_delete_pessoa_telefone
+VERY_SPECIAL_TRIGGER_perm_to_the_manager
 
 # end

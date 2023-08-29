@@ -1,15 +1,23 @@
 # Arquivo contendo a ordem de criação das tabelas.
 
 email
+
+# Usado para identificar apps mensageiros.
+aplicativo_mensagem
+
 telefone
 endereco
 
+telefone_aplicativo
 
 # Entidade principal. Representa o usuário.
 pessoa
 
 # Tabela de relacionamento entre pessoa e email.
 pessoa_email
+
+# Tabela de relacionamento entre pessoa e telefone.
+pessoa_telefone
 
 # Variações de pessoa
 aluno_comunidade_academica

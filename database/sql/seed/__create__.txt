@@ -1,0 +1,12 @@
+endereco
+pessoa
+
+aplicativo_mensagem
+telefone
+telefone_aplicativo
+pessoa_telefone
+
+especialista
+gestor_andifes
+
+# end

@@ -7,7 +7,6 @@ services:
       - "8000:8000"
     volumes:
       - ./interface/src:/var/www/html
-      - ./interface/seed:/var/www/html/seed
     depends_on:
       - database
 
@@ -20,7 +19,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-        - ./logs:/var/logs
+        - ./logs:/tmp/logs
         - ./database/sql:/opt/sql
 
 

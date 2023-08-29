@@ -18,8 +18,8 @@ jobs:
 
     - name: Docker Compose Up
       run: |
-        sudo mkdir /var/logs && sudo chmod 777 /var/logs && \
-        sudo chown -R $USER:$USER /var/logs && \
+        sudo mkdir logs && sudo chmod 777 logs && \
+        sudo chown -R $USER:$USER logs && \
         docker-compose -f docker-compose.yml up -d --build
 
     - name: Test if container is running
