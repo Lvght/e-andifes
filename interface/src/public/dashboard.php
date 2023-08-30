@@ -5,7 +5,7 @@ include $_ENV['HOME'] . '/inc/inject.php';
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// Comunicação com o banco de dados
 try {
-    $query = "SELECT * FROM fn_table_introspect('view_admin_pessoa')";
+    $query = "SELECT * FROM view_admin_pessoa";
     $resultado = executaQueryNoBancoDeDados($query);
 
     $template = $twig->load('dashboard.twig');

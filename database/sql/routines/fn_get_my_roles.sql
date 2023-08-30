@@ -4,7 +4,7 @@
 -- A integridade do banco é garantida por vias mais drásticas.
 -- Isso aqui é só para ajudar a construção da interface.
 
-CREATE OR REPLACE FUNCTION get_my_roles()
+CREATE OR REPLACE FUNCTION fn_get_my_roles()
     RETURNS TABLE
             (
                 role_name VARCHAR

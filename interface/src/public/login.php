@@ -26,11 +26,11 @@ else {
     else {
         session_start();
         // Se a conexão foi bem sucedida, obtém os dados do usuário.
-        $query = pg_query($conn, "SELECT * FROM who_am_i()");
+        $query = pg_query($conn, "SELECT * FROM fn_who_am_i()");
         $result = pg_fetch_assoc($query);
         $_SESSION['name'] = $result['nome'];
 
-        $query = pg_query($conn, "SELECT * FROM get_my_roles()");
+        $query = pg_query($conn, "SELECT * FROM fn_get_my_roles()");
         $result = pg_fetch_all($query);
         $_SESSION['roles'] = $result;
 
