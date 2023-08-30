@@ -1,5 +1,5 @@
 view_admin_pessoa
 view_cursos_oc
-view_turmas_ofertadas_idioma
+view_fn_turma_por_id
 
 # end
