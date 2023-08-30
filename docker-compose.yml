@@ -19,7 +19,6 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-        - ./logs:/tmp/logs
         - ./database/sql:/opt/sql
 
 
