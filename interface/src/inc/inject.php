@@ -11,3 +11,5 @@ include $_ENV['HOME'] . "/helpers/get_connection.php";
 
 $loader = new \Twig\Loader\FilesystemLoader($_ENV['HOME'] . '/templates');
 $twig = new \Twig\Environment($loader);
+$twig->addGlobal('session', $_SESSION);
+$twig->addGlobal('path', $_SERVER['REQUEST_URI']);

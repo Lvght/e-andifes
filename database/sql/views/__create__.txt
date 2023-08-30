@@ -1,3 +1,4 @@
 view_admin_pessoa
+view_cursos_oc
 
 # end

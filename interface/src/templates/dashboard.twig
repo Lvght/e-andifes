@@ -1,51 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Document</title>
+{# 
+	ISTO É UM EXEMPLO.
 
-		<style>
-			table,
-			th,
-			td {
-				border: 1px solid black;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Olá, {{ username }}</h1>
+	EU DEFINI UM TEMPLATE BASE QUE POSSUI ALGUNS BLOCOS CUSTOMIZÁVEIS.
+	USE ELES PARA CONSTRUIR A SUA PÁGINA DE ACORDO COM OS ARTEFATOS
+	QUE VOCÊ DESENVOLVEU.
 
-		<a href="../soma.php">Faça uma soma usando um procedimento do banco de dados</a>
+	OS BLOCOS DISPONÍVEIS SÃO:
 
-		<hr>
+	- tituloDaPagina
+	- conteudoDaPagina
+#}
 
-		{% if error %}
-			<h2 style="color: red">{{ error }}</h2>
-		{% endif %}
+{% extends "inc/base.html" %}
 
-		{% if pessoas is not empty %}
-			<h2>Pessoas cadastradas no banco de dados</h2>
 
-			<table style="padding: 2px">
-				<tr>
-					<th><input type="checkbox"> </th>
-					{% for k in keys %}
-						<th>{{ k }}</th>
-					{% endfor %}
-				</tr>
+{% block tituloDaPagina %}
+	Página inicial
+{% endblock %}
 
-				{% for pessoa in pessoas %}
-					<tr>
-						<td><input type="checkbox"> </td>
-						{% for k in keys %}
-							<td>{{ pessoa[k] }}</td>
-						{% endfor %}
-					</tr>
-				{% endfor %}
-			</table>
-		{% endif %}
-
-	<a href="logout.php">Sair</a>
-	</body>
-</html>
+{% block conteudoDaPagina %}
+	<h1 class="mt-4">
+		Bem vindo, {{ session.name }}
+	</h1>
+	<ol class="breadcrumb mb-4">
+		<li class="breadcrumb-item active">Página inicial</li>
+	</ol>
+	<div class="card mb-4">
+		<div class="card-header">
+			<i class="fas fa-person me-1"></i>
+			Pessoas cadastradas no sistema
+		</div>
+		<div
+			class="card-body">
+			<!--
+				Para renderizar uma tabela, apenas adapte a linha abaixo.
+				Os valores devem vir do script PHP.
+			-->
+			{{ include('inc/tabela.html', { 'COLUNAS_DA_TABELA': keys, 'CONTEUDO_DA_TABELA': pessoas }) }}
+		</div>
+	</div>
+{% endblock %}

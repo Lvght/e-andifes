@@ -8,7 +8,7 @@
 session_start();
 include $_ENV['HOME'] . '/helpers/twig.php';
 
-$template = $twig->load('index.twig');
+$template = $twig->load('index.html');
 
 // Verifica se essa página foi invocada por outra com uma mensagem de erro.
 $errorMessage = null;

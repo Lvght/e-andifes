@@ -1,3 +1,9 @@
+CREATE ROLE "1" INHERIT LOGIN PASSWORD '123mudar';
+CREATE ROLE "2" INHERIT LOGIN PASSWORD '123mudar';
+CREATE ROLE "3" INHERIT LOGIN PASSWORD '123mudar';
+CREATE ROLE "4" INHERIT LOGIN PASSWORD '123mudar';
+CREATE ROLE "5" INHERIT LOGIN PASSWORD '123mudar';
+
 INSERT INTO pessoa
 (cpf, nome_registro, nome_social, nascimento, endereco_numero, endereco_rua, endereco_bairro, endereco_id)
 
