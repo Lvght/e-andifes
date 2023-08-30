@@ -17,3 +17,14 @@ function getConnection(string $username = null, string $password = null): PgSql\
     $connString = "host={$host} port={$port} dbname={$database} user={$username} password={$password}";
     return @pg_connect($connString);
 }
+
+
+function executaQueryNoBancoDeDados(string $query)
+{
+    $conn = getConnection();
+    $result = @pg_query($conn, $query);
+    if (!$result) {
+        throw new Exception(pg_last_error($conn));
+    }
+    return @pg_fetch_all($result);
+}

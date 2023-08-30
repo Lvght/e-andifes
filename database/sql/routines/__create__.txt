@@ -4,6 +4,9 @@ pr_hello_world
 fn_soma
 
 fn_has_system_access
+fn_table_introspect
+who_am_i
+get_my_roles
 pr_cadastra_pessoa
 
 # end

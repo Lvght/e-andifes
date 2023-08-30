@@ -1,0 +1,25 @@
+<table id="datatablesSimple">
+    <thead>
+        <tr>
+            {% for coluna in COLUNAS_DA_TABELA %}
+                <th>{{ coluna }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            {% for coluna in COLUNAS_DA_TABELA %}
+                <th>{{ coluna }}</th>
+            {% endfor %}
+        </tr>
+    </tfoot>
+    <tbody>
+        {% for entrada in CONTEUDO_DA_TABELA %}
+            <tr>
+                {% for coluna in COLUNAS_DA_TABELA %}
+                    <td>{{ entrada[coluna] }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

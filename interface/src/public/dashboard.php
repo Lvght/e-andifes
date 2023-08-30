@@ -2,31 +2,37 @@
 
 include $_ENV['HOME'] . '/inc/inject.php';
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//// Comunicação com o banco de dados
 try {
-    $query = @pg_query(getConnection(), "SELECT * FROM view_admin_pessoa");
-    if (!$query) throw new Exception("Não foi possível executar a query. " . pg_last_error(getConnection()) . "\n");
-    $result = @pg_fetch_all($query);
-} catch (Throwable $e) {
+    $query = "SELECT * FROM fn_table_introspect('view_admin_pessoa')";
+    $resultado = executaQueryNoBancoDeDados($query);
+
+    $template = $twig->load('dashboard.twig');
+
+    // Você deve declarar um array com as propriedades que deseja usar dentro do
+    // arquivo HTML.
+
+    // Obtenho todas as chaves do array para desenhar a tabela.
+    if ($resultado) {
+        $keys = array_keys($resultado[0]);
+    } else {
+        $keys = [];
+    }
+
+    $props = [
+        'pessoas' => $resultado,
+        'keys' => $keys
+    ];
+    echo $template->render($props);
+}
+
+// Você pode decidir o que fazer em caso de erro.
+// Adicionar uma nova variável e exibir um erro bonito na interface? Pode ser
+// Neste exemplo, eu só mando o usuário para uma página de erro e boa.
+catch (Throwable $e) {
     $error = $e->getMessage();
-    $result = [];
+    
+    $template = $twig->load('500.html');
+    echo $template->render(['error' => $error]);
 }
-
-// checks if result is not empty.
-if ($result) {
-    $keys = array_keys($result[0]);
-} else {
-    $keys = [];
-}
-
-$template = $twig->load('dashboard.twig');
-$props = [
-    'username' => $_SESSION['username'],
-    'pessoas' => $result,
-    'keys' => $keys
-];
-
-if (isset($error)) {
-    $props['error'] = $error;
-}
-
-echo $template->render($props);
