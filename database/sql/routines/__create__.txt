@@ -7,7 +7,9 @@ fn_has_system_access
 fn_table_introspect
 fn_who_am_i
 fn_get_my_roles
+fn_parceiros_inativos
 pr_cadastra_pessoa
 pr_cadastra_edital
+pr_cadastra_ficha_adesao_docente_oferta_coletiva
 
 # end
