@@ -7,6 +7,7 @@ CREATE TABLE parceiro (
     complemento VARCHAR(100),
     cpf CHAR(11),
     id INTEGER NOT NULL,
+    status VARCHAR(20) NOT NULL CHECK (status IN ('Ativo', 'Em Aprovação', 'Inativo')),
 
     CONSTRAINT fk_gestor
         FOREIGN KEY (cpf)
