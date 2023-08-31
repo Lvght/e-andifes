@@ -1,6 +1,7 @@
 after_insert_update_pessoa_telefone
 after_insert_view_pessoa
 after_delete_pessoa_telefone
+after_delete_pessoa_email
 before_insert_update_data_turma
 VERY_SPECIAL_TRIGGER_perm_to_the_manager
 
