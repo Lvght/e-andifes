@@ -37,7 +37,7 @@ BEGIN
 	END LOOP;
 	CLOSE c_turmas;
 	
-	-- Imprimir quantas turmas finalizadas há até o momento
+	-- Imprimir a quantidade de turmas finalizadas até o momento
 	RAISE NOTICE 'A quantidade de turmas finalizadas = %', contador;
 	
 END;

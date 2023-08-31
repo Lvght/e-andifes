@@ -1,5 +1,5 @@
 -- Este procedimento cadastra as turmas da oferta coletiva
-CREATE OR REPLACE PROCEDURE pr_cadastra_turmas_oc (
+CREATE OR REPLACE PROCEDURE pr_cadastra_turmas_oc2 (
     p_dia_semana VARCHAR,
     p_horario_inicio TIME,
     p_idioma VARCHAR,
