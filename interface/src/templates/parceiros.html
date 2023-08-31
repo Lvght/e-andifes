@@ -1,0 +1,24 @@
+{#
+ISTO É UM EXEMPLO.
+
+EU DEFINI UM TEMPLATE BASE QUE POSSUI ALGUNS BLOCOS CUSTOMIZÁVEIS.
+USE ELES PARA CONSTRUIR A SUA PÁGINA DE ACORDO COM OS ARTEFATOS
+QUE VOCÊ DESENVOLVEU.
+
+OS BLOCOS DISPONÍVEIS SÃO:
+
+- tituloDaPagina
+- conteudoDaPagina
+#}
+
+{% extends "inc/base.html" %}
+
+
+{% block tituloDaPagina %}
+Parceiros | Visão geral
+{% endblock %}
+
+{% block conteudoDaPagina %}
+<h1 class="mt-4">Visão geral de parceiros</h1>
+<hr>
+{% endblock %}

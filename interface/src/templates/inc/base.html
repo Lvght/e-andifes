@@ -11,6 +11,12 @@
 		{% block tituloDaPagina %}{% endblock %}
 	</title>
 	<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+
+	<!-- 
+		Aparentemente o PHP consegue arrumar isso daqui ele mesmo.
+		Isso ajuda para eu não ter que realmente tratar os casos das subpastas.
+		Considerando o prazo, é isso daí.
+	-->
 	<link href="css/styles.css" rel="stylesheet" />
 	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
@@ -18,8 +24,9 @@
 <body class="sb-nav-fixed">
 	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
 		<!-- Navbar Brand-->
-		{# <a class="navbar-brand ps-3" href="index.html">E-Andifes</a> #}
-		<a class="navbar-brand ps-3" href="dashboard.php"> <img src="assets/res/Logo-e-andifes.png" width="150px" />
+		<a class="navbar-brand ps-3" href="dashboard.php"> 
+			<!-- Mesmo cenário do acima -->
+			<img src="assets/res/Logo-e-andifes.png" width="150px" />
 		</a>
 		<!-- Sidebar Toggle-->
 		<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
@@ -77,9 +84,13 @@
 							</div>
 							Agenda
 						</a>
+
+
 						<div class="sb-sidenav-menu-heading">Administração</div>
-						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-							data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+
+						<!-- Editais -->
+						<a class="nav-link {% if not (path starts with '/editais_') %}collapsed{% endif %} {% if path starts with '/editais' %}active{% endif %}" href="#" data-bs-toggle="collapse"
+							data-bs-target="#collapseEditais" aria-expanded="false" aria-controls="collapseEditais">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-file-contract"></i>
 							</div>
@@ -88,15 +99,17 @@
 								<i class="fas fa-angle-down"></i>
 							</div>
 						</a>
-						<div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+						<div class="collapse {% if 'editais' in path %}show{% endif %}" id="collapseEditais" aria-labelledby="headingOne"
 							data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="#">Visão geral</a>
-								<a class="nav-link" href="#">Cadastro de editais</a>
+								<a class="nav-link {% if 'editais_visao_geral.php' in path %}active{% endif %}" href="editais_visao_geral.php">Visão geral</a>
+								<a class="nav-link {% if 'editais_cadastro.php' in path %}active{% endif %}" href="editais_cadastro.php">Cadastrar edital</a>
 							</nav>
 						</div>
-						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
-							aria-expanded="false" aria-controls="collapsePages">
+
+						<!-- Fichas -->
+						<a class="nav-link {% if not (path starts with '/fichas_') %}collapsed{% endif %} {% if path starts with '/fichas_' %}active{% endif %}" href="#" data-bs-toggle="collapse"
+							data-bs-target="#collapseFichas" aria-expanded="false" aria-controls="collapseFichas">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-rectangle-list"></i>
 							</div>
@@ -105,51 +118,25 @@
 								<i class="fas fa-angle-down"></i>
 							</div>
 						</a>
-						<div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+						<div class="collapse {% if 'fichas' in path %}show{% endif %}" id="collapseFichas" aria-labelledby="headingOne"
 							data-bs-parent="#sidenavAccordion">
-							<nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-								<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-									data-bs-target="#pagesCollapseAuth" aria-expanded="false"
-									aria-controls="pagesCollapseAuth">
-									Authentication
-									<div class="sb-sidenav-collapse-arrow">
-										<i class="fas fa-angle-down"></i>
-									</div>
-								</a>
-								<div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
-									data-bs-parent="#sidenavAccordionPages">
-									<nav class="sb-sidenav-menu-nested nav">
-										<a class="nav-link" href="login.html">Login</a>
-										<a class="nav-link" href="register.html">Register</a>
-										<a class="nav-link" href="password.html">Forgot Password</a>
-									</nav>
-								</div>
-								<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-									data-bs-target="#pagesCollapseError" aria-expanded="false"
-									aria-controls="pagesCollapseError">
-									Error
-									<div class="sb-sidenav-collapse-arrow">
-										<i class="fas fa-angle-down"></i>
-									</div>
-								</a>
-								<div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
-									data-bs-parent="#sidenavAccordionPages">
-									<nav class="sb-sidenav-menu-nested nav">
-										<a class="nav-link" href="401.html">401 Page</a>
-										<a class="nav-link" href="404.html">404 Page</a>
-										<a class="nav-link" href="500.html">500 Page</a>
-									</nav>
-								</div>
+							<nav class="sb-sidenav-menu-nested nav">
+								<a class="nav-link {% if 'fichas_visao_geral.php' in path %}active{% endif %}" href="fichas_visao_geral.php">Visão geral</a>
+								<a class="nav-link {% if 'fichas_cadastro.php' in path %}active{% endif %}" href="fichas_cadastro.php">Nova ficha</a>
+								<a class="nav-link {% if 'fichas_cadastro_tipo.php' in path %}active{% endif %}" href="fichas_cadasto_tipo.php">Novo tipo de ficha</a>
 							</nav>
 						</div>
+
+						
+						
 						<div class="sb-sidenav-menu-heading">Contatos</div>
-						<a class="nav-link" href="#">
+						<a class="nav-link {% if path == '/parceiros.php' %}active{% endif %}" href="parceiros.php">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-building"></i>
 							</div>
 							Parceiros
 						</a>
-						<a class="nav-link" href="#">
+						<a class="nav-link  {% if path == '/pessoas.php' %}active{% endif %}" href="pessoas.php">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-users"></i>
 							</div>
@@ -201,6 +188,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
 		crossorigin="anonymous"></script>
 	<script src="js/datatables-simple-demo.js"></script>
+	<script src="../../../../../../js/datatables-simple-demo.js"></script>
 </body>
 
 </html>
