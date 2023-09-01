@@ -1,4 +1,5 @@
 view_admin_pessoa
+view_parceiro
 view_cursos_oc
 view_cursos
 
