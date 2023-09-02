@@ -4,5 +4,6 @@ after_delete_pessoa_telefone
 before_insert_update_data_turma
 VERY_SPECIAL_TRIGGER_perm_to_the_manager
 instead_of_insert_view_cursos
+watch_curso
 
 # end
