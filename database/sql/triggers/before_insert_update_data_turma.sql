@@ -1,9 +1,7 @@
 CREATE OR REPLACE FUNCTION validar_datas_turma()
 RETURNS TRIGGER AS $$
 BEGIN
-    IF NEW.data_inicio > NEW.data_fim THEN
-        RAISE EXCEPTION 'Data de início deve ser menor que data de fim';
-    END IF;
+    ASSERT NEW.data_inicio < NEW.data_fim, 'Data de início deve ser menor que data de fim';
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;

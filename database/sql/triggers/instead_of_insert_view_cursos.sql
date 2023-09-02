@@ -1,7 +1,6 @@
 CREATE OR REPLACE FUNCTION fn_inserir_view_cursos()
 RETURNS TRIGGER AS $$
 BEGIN
-    -- Inserir os dados diretamente na tabela 'curso'
     INSERT INTO curso (nome, codigo, idioma, carga_horaria, link_plano_de_ensino)
     VALUES (NEW.nome, NEW.codigo, NEW.idioma, NEW.carga_horaria, NEW.link_plano_de_ensino);
     RETURN NEW;
