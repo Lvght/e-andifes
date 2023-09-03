@@ -1,0 +1,35 @@
+{#
+ISTO É UM EXEMPLO.
+
+EU DEFINI UM TEMPLATE BASE QUE POSSUI ALGUNS BLOCOS CUSTOMIZÁVEIS.
+USE ELES PARA CONSTRUIR A SUA PÁGINA DE ACORDO COM OS ARTEFATOS
+QUE VOCÊ DESENVOLVEU.
+
+OS BLOCOS DISPONÍVEIS SÃO:
+
+- tituloDaPagina
+- conteudoDaPagina
+#}
+
+{% extends "inc/base.html" %}
+
+
+{% block tituloDaPagina %}
+Pessoas | Visão geral
+{% endblock %}
+
+{% block conteudoDaPagina %}
+
+{% for f in campos %}
+<form>
+    <div class="form-group">
+        {{ include('inc/campo_form.html', {
+        'nome_coluna': f.column_name,
+        'tipo': f.data_type,
+        'valor': instancia[f.column_name],
+        }) }}
+    </div>
+</form>
+{% endfor %}
+
+{% endblock %}

@@ -2,5 +2,5 @@
 
 include $_ENV['HOME'] . '/inc/inject.php';
 
-$template = $twig->load('parceiros.html');
+$template = $twig->load('fichas/cadastro_ficha.html');
 echo $template->render();

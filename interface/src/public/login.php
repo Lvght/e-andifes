@@ -25,9 +25,11 @@ else {
 
         if (!$conn) {
             header('Location: /login.php?erro=500_internal_server_error');
+            exit();
         }
 
         header('Location: /login.php?erro=401_unauthorized');
+        exit();
     }
     else {
         session_start();
@@ -38,7 +40,7 @@ else {
 
         $query = pg_query($conn, "SELECT * FROM fn_get_my_roles()");
         $result = pg_fetch_all($query);
-        $_SESSION['roles'] = $result;
+        $_SESSION['cargos'] = array_column($result, 'role_name');
 
         $_SESSION['username'] = $_POST['username'];
         $_SESSION['password'] = $_POST['password'];
