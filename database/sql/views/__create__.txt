@@ -1,4 +1,4 @@
 view_admin_pessoa
 view_cursos_oc
-
+view_turma_especifica_oferta_coletiva
 # end
