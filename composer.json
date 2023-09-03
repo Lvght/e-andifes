@@ -1,0 +1,17 @@
+{
+    "name": "kirit/e-andifes",
+    "autoload": {
+        "psr-4": {
+            "Kirit\\EAndifes\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bowie",
+            "email": "marketing@letscode.com.br"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}

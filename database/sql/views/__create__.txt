@@ -1,5 +1,6 @@
 view_admin_pessoa
 view_cursos_oc
 view_cursos
+view_formularios_em_andamentos
 
 # end
