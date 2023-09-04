@@ -20,11 +20,5 @@ BEGIN
 
     INSERT INTO ficha_adesao_docente_oferta_coletiva (emissor, professor_isf, turma_ofertada)
     VALUES (p_emissor, p_professor_isf, p_turma_ofertada);
-
-    COMMIT;
-EXCEPTION
-    WHEN OTHERS THEN
-        ROLLBACK;
-        RAISE;
 END;
 $$;
