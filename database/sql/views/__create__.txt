@@ -1,5 +1,7 @@
 view_admin_pessoa
 view_cursos_oc
+view_fn_turma_por_id
 view_cursos
+view_turmas_oc
 
 # end
