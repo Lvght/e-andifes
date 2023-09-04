@@ -70,8 +70,8 @@
 							Página inicial
 						</a>
             
-            <!-- Posicionamento temporário para parte da interface de view_cursos -->
-            <a class="nav-link {% if path == '/cursos.php' %}active{% endif %}" href="cursos.php">
+            			<!-- Posicionamento temporário para parte da interface de view_cursos -->
+            			<a class="nav-link {% if path == '/cursos.php' %}active{% endif %}" href="cursos.php">
 							<div class="sb-nav-link-icon">
 								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 							</div>
@@ -93,6 +93,31 @@
 							</div>
 							Agenda
 						</a>
+
+						<!-- QUAIS CARGOS PODEM ACESSAR PÁGINAS DESTE MENU?? TODOS???? -->
+						{% 
+							if 'gestor_andifes' in session.cargos
+							or 'gestor_ies' in session.cargos
+						%}
+							<div class="sb-sidenav-menu-heading">Administração</div>
+
+							<!-- Editais -->
+							<a class="nav-link {% if not ('/editais/' in path) %}collapsed{% endif %} {% if path starts with '/editais' %}active{% endif %}" href="#" data-bs-toggle="collapse"
+								data-bs-target="#collapseEditais" aria-expanded="false" aria-controls="collapseEditais">
+								<div class="sb-nav-link-icon">
+									<i class="fas fa-file-contract"></i>
+								</div>
+								Editais
+								<div class="sb-sidenav-collapse-arrow">
+									<i class="fas fa-angle-down"></i>
+								</div>
+							</a>
+							<div class="collapse {% if '/editais/' in path %}show{% endif %}" id="collapseEditais" aria-labelledby="headingOne"
+								data-bs-parent="#sidenavAccordion">
+								<nav class="sb-sidenav-menu-nested nav">
+									<a class="nav-link {% if path == '/editais/' %}active{% endif %}" href="/editais/">Visão geral</a>
+									<a class="nav-link {% if path == '/editais/cadastro_edital.php' %}active{% endif %}" href="/editais/cadastro_edital.php">Cadastrar edital</a>
+								</nav>
 							</div>
 
 							<!-- Fichas -->
