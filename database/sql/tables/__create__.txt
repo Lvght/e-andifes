@@ -75,4 +75,7 @@ cursista_gerencia_repositorio
 dia_aula_turma
 gestor_oferta_coletiva
 
+# Tabelas de histórico
+hist_curso
+
 # end

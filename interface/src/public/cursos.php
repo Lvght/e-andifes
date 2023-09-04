@@ -1,15 +1,14 @@
 <?php
 
-// SEMPRE INCLUA ISSO.
 include $_ENV['HOME'] . '/inc/inject.php';
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// Comunicação com o banco de dados
 try {
-    $query = "SELECT * FROM view_admin_pessoa";
+    $query = "SELECT * FROM view_cursos";
     $resultado = executaQueryNoBancoDeDados($query);
 
-    $template = $twig->load('dashboard.html');
+    $template = $twig->load('cursos.twig');
 
     // Você deve declarar um array com as propriedades que deseja usar dentro do
     // arquivo HTML.

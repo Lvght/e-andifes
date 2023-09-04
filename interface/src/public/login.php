@@ -3,8 +3,8 @@
 // Envia a página de template
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     include $_ENV['HOME'] . '/helpers/twig.php';
-    $template = $twig->load('login.html');  
-    echo $template->render();
+    $template = $twig->load('login.html');
+    echo $template->render(['erro' => $_GET['erro'] ?? null]);
     // echo "saidps";
 }
 
@@ -19,9 +19,17 @@ else {
     include $_ENV['HOME'] . '/helpers/get_connection.php';
     $conn = getConnection($_POST['username'], $_POST['password']);
 
-    // Verifica se a conexão foi bem sucedida
+    // A conexão falhou. Precisamos descobrir por que
     if (!$conn) {
+        $conn = getConnection('postgres', 'postgres');
+
+        if (!$conn) {
+            header('Location: /login.php?erro=500_internal_server_error');
+            exit();
+        }
+
         header('Location: /login.php?erro=401_unauthorized');
+        exit();
     }
     else {
         session_start();
@@ -32,7 +40,7 @@ else {
 
         $query = pg_query($conn, "SELECT * FROM fn_get_my_roles()");
         $result = pg_fetch_all($query);
-        $_SESSION['roles'] = $result;
+        $_SESSION['cargos'] = array_column($result, 'role_name');
 
         $_SESSION['username'] = $_POST['username'];
         $_SESSION['password'] = $_POST['password'];
