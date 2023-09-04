@@ -8,5 +8,6 @@ pessoa_telefone
 
 especialista
 gestor_andifes
+cursos
 
 # end
