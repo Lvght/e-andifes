@@ -8,18 +8,20 @@
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 	<title>
-		{% block tituloDaPagina %}{% endblock %}
+		{% block tituloDaPagina %}E-andifes{% endblock %}
 	</title>
 	<link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-	<link href="css/styles.css" rel="stylesheet" />
+
+	<link href="/css/styles.css" rel="stylesheet" />
 	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="sb-nav-fixed">
 	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
 		<!-- Navbar Brand-->
-		{# <a class="navbar-brand ps-3" href="index.html">E-Andifes</a> #}
-		<a class="navbar-brand ps-3" href="dashboard.php"> <img src="assets/res/Logo-e-andifes.png" width="150px" />
+		<a class="navbar-brand ps-3" href="dashboard.php"> 
+			<!-- Mesmo cenário do acima -->
+			<img src="/assets/res/Logo-e-andifes.png" width="150px" />
 		</a>
 		<!-- Sidebar Toggle-->
 		<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
@@ -46,7 +48,7 @@
 						<hr class="dropdown-divider" />
 					</li>
 					<li>
-						<a class="dropdown-item" href="logout.php">Sair</a>
+						<a class="dropdown-item" href="/logout.php">Sair</a>
 					</li>
 				</ul>
 			</li>
@@ -59,103 +61,81 @@
 				<div class="sb-sidenav-menu">
 					<div class="nav">
 						<div class="sb-sidenav-menu-heading">Início</div>
-						<a class="nav-link {% if path == '/dashboard.php' %}active{% endif %}" href="dashboard.php">
+
+						<!-- TODOS OS CARGOS PODEM ACESSAR A PÁGINA INICIAL -->
+						<a class="nav-link {% if path == '/dashboard.php' %}active{% endif %}" href="/dashboard.php">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-home"></i>
 							</div>
 							Página inicial
 						</a>
-						<a class="nav-link" href="#">
+            
+            <!-- Posicionamento temporário para parte da interface de view_cursos -->
+            <a class="nav-link {% if path == '/cursos.php' %}active{% endif %}" href="cursos.php">
 							<div class="sb-nav-link-icon">
-								<i class="fas fa-bell"></i>
+								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 							</div>
-							Notificações
+							Cursos
 						</a>
+
+						<!-- APENAS O GESTOR ANDIFES PODE ACESSAR O REGISTRO DE AUDITORIA -->
+						{% if 'gestor_andifes' in session.cargos %}
+							<a class="nav-link {% if path == '/auditoria/' %}active{% endif %}" href="/auditoria/">
+								<div class="sb-nav-link-icon">
+									<i class="fas fa-shield"></i>
+								</div>
+								Registro de auditoria
+							</a>
+						{% endif %}
 						<a class="nav-link" href="#">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-calendar"></i>
 							</div>
 							Agenda
 						</a>
-						<a class="nav-link {% if path == '/cursos.php' %}active{% endif %}" href="cursos.php">
-							<div class="sb-nav-link-icon">
-								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 							</div>
-							Cursos
-						</a>
-						<div class="sb-sidenav-menu-heading">Administração</div>
-						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-							data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-							<div class="sb-nav-link-icon">
-								<i class="fas fa-file-contract"></i>
-							</div>
-							Editais
-							<div class="sb-sidenav-collapse-arrow">
-								<i class="fas fa-angle-down"></i>
-							</div>
-						</a>
-						<div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
-							data-bs-parent="#sidenavAccordion">
-							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="#">Visão geral</a>
-								<a class="nav-link" href="#">Cadastro de editais</a>
-							</nav>
-						</div>
-						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
-							aria-expanded="false" aria-controls="collapsePages">
-							<div class="sb-nav-link-icon">
-								<i class="fas fa-rectangle-list"></i>
-							</div>
-							Fichas
-							<div class="sb-sidenav-collapse-arrow">
-								<i class="fas fa-angle-down"></i>
-							</div>
-						</a>
-						<div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
-							data-bs-parent="#sidenavAccordion">
-							<nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-								<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-									data-bs-target="#pagesCollapseAuth" aria-expanded="false"
-									aria-controls="pagesCollapseAuth">
-									Authentication
-									<div class="sb-sidenav-collapse-arrow">
-										<i class="fas fa-angle-down"></i>
-									</div>
-								</a>
-								<div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
-									data-bs-parent="#sidenavAccordionPages">
-									<nav class="sb-sidenav-menu-nested nav">
-										<a class="nav-link" href="login.html">Login</a>
-										<a class="nav-link" href="register.html">Register</a>
-										<a class="nav-link" href="password.html">Forgot Password</a>
-									</nav>
+
+							<!-- Fichas -->
+							<a class="nav-link {% if not (path starts with '/fichas/') %}collapsed{% endif %} {% if path starts with '/fichas_' %}active{% endif %}" href="#" data-bs-toggle="collapse"
+								data-bs-target="#collapseFichas" aria-expanded="false" aria-controls="collapseFichas">
+								<div class="sb-nav-link-icon">
+									<i class="fas fa-rectangle-list"></i>
 								</div>
-								<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-									data-bs-target="#pagesCollapseError" aria-expanded="false"
-									aria-controls="pagesCollapseError">
-									Error
-									<div class="sb-sidenav-collapse-arrow">
-										<i class="fas fa-angle-down"></i>
-									</div>
-								</a>
-								<div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
-									data-bs-parent="#sidenavAccordionPages">
-									<nav class="sb-sidenav-menu-nested nav">
-										<a class="nav-link" href="401.html">401 Page</a>
-										<a class="nav-link" href="404.html">404 Page</a>
-										<a class="nav-link" href="500.html">500 Page</a>
-									</nav>
+								Fichas
+								<div class="sb-sidenav-collapse-arrow">
+									<i class="fas fa-angle-down"></i>
 								</div>
-							</nav>
-						</div>
+							</a>
+							<div class="collapse {% if path starts with '/fichas/' %}show{% endif %}" id="collapseFichas" aria-labelledby="headingOne"
+								data-bs-parent="#sidenavAccordion">
+								<nav class="sb-sidenav-menu-nested nav">
+									<a class="nav-link {% if '/fichas/' == path %}active{% endif %}" href="/fichas/">Visão geral</a>
+									<a class="nav-link {% if '/fichas/cadastro_ficha.php'== path %}active{% endif %}" href="/fichas/cadastro_ficha.php">Nova ficha</a>
+									<a class="nav-link {% if '/fichas/cadastro_tipo_ficha.php'== path %}active{% endif %}" href="/fichas/cadastro_tipo_ficha.php">Novo tipo de ficha</a>
+								</nav>
+							</div>
+							
+							<!-- APENAS O GESTOR ANDIFES PODE ACESSAR A PÁGINA DE EDIÇÃO DA PÁGINA EXTERNA -->
+							{% if 'gestor_andifes' in session.cargos %}
+								<a class="nav-link {% if path == '/pagina-externa/' %}active{% endif %}" href="/pagina-externa/">
+									<div class="sb-nav-link-icon">
+										<i class="fas fa-globe"></i>
+									</div>
+									Página externa
+								</a>
+							{% endif %}
+						{% endif %}
+
+						
+						
 						<div class="sb-sidenav-menu-heading">Contatos</div>
-						<a class="nav-link" href="#">
+						<a class="nav-link {% if path == '/parceiros/' %}active{% endif %}" href="/parceiros/">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-building"></i>
 							</div>
 							Parceiros
 						</a>
-						<a class="nav-link" href="#">
+						<a class="nav-link  {% if path == '/pessoas/' %}active{% endif %}" href="/pessoas/">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-users"></i>
 							</div>
@@ -165,10 +145,9 @@
 				</div>
 				<div class="sb-sidenav-footer">
 					<i class="fas fa-id-card-clip fa-fw small"></i>
-					{# {{ username }} #}
 					{{ session.username }}
-					{% for r in session.roles %}
-					<div class="small">#{{ r.role_name }}</div>
+					{% for r in session.cargos %}
+					<div class="small">#{{ r }}</div>
 					{% endfor %}
 				</div>
 			</nav>
@@ -200,13 +179,13 @@
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
 		crossorigin="anonymous"></script>
-	<script src="js/scripts.js"></script>
+	<script src="/js/scripts.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
 	<script src="assets/demo/chart-area-demo.js"></script>
 	<script src="assets/demo/chart-bar-demo.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
 		crossorigin="anonymous"></script>
-	<script src="js/datatables-simple-demo.js"></script>
+	<script src="/js/datatables-simple-demo.js"></script>
 </body>
 
 </html>
