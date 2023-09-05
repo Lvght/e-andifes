@@ -17,6 +17,7 @@ BEGIN
     IF NOT FOUND THEN
         RAISE EXCEPTION 'Não há editais abertos para o ano de %', ano_desejado;
     END IF;
+    CLOSE r;
 END;
 $$
 LANGUAGE plpgsql;

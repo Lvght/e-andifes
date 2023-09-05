@@ -19,4 +19,7 @@ pr_cadastra_ficha_adesao_docente_oferta_coletiva
 pr_cadastra_parceiro
 pr_cadastra_turmas_oc
 pr_filtra_edital_por_ano
+pr_cadastra_ficha_adesao_rede_andifes
+pr_cadastra_ficha_credenciamento_professor
+
 # end
