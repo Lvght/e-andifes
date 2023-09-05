@@ -1,7 +1,6 @@
-CREATE PROCEDURE sp_AdicionarFicha (
-  tipo_ficha NVARCHAR(255),
+CREATE PROCEDURE pr_AdicionarFicha (
+  tipo_ficha VARCHAR,
   -- Dados  adesao docente oferta coletiva
-  id SERIAL = NULL,
   emissor CHAR(11) = NULL,
   professor_isf CHAR(11) = NULL,
   turma_ofertada INTEGER = NULL,
@@ -15,47 +14,36 @@ CREATE PROCEDURE sp_AdicionarFicha (
   credenciado_em TEXT = NULL,
   -- Dados credenciamento professor
   docente_orientador CHAR(11) = NULL,
-  -- Dados inscricao oferta coletiva
-  turma_ofertada INTEGER = NULL
   -- Ficha base
-  titulo VARCHAR(255) = NULL,
+  titulo VARCHAR = NULL,
   data_inicio DATE = NULL,
   data_termino DATE = NULL,
   observacoes TEXT = NULL,
   criado_em DATE = NULL,
   criado_por CHAR(11) = NULL,
-  edital INTEGER = NULL,
+  edital INTEGER = NULL
 )
-AS
+AS $$
 BEGIN
     -- Verificar qual tabela corresponde ao tipo de ficha e inserir a descrição
-    IF tipo_ficha = 'Formulario de Adesao a Rede Andifes'
-    BEGIN
-        INSERT INTO ficha_adesao_rede_andifes (id, link_termo_compromisso, link_oficio_coordenador_pedagogico_geral, link_politica_linguistica, instituicao) VALUES (id, link_termo_compromisso, link_oficio_coordenador_pedagogico_geral, link_politica_linguistica, instituicao)
-    END
-    ELSE IF tipo_ficha = 'Formulario de Credenciamento de Especialistas'
-    BEGIN
-        INSERT INTO ficha_credenciamento_especialista (id, especialista, credenciado_em) VALUES (id, especialista, credenciado_em)
-    END
-    ELSE IF tipo_ficha = 'Formulario de Credenciamento de Professores IsF'
-    BEGIN
-        INSERT INTO ficha_credenciamento_professor_isf (id, docente_orientador, professor_isf) VALUES (id, docente_orientador, professor_isf)
-    END
-    ELSE IF tipo_ficha = 'Formulario de Adesão do Docente à Oferta Coletiva'
-    BEGIN
-        INSERT INTO ficha_adesao_docente_oferta_coletiva (id, emissor, professor_isf, turma_ofertada) VALUES (id, emissor, professor_isf, turma_ofertada)
-    END
-    ELSE IF tipo_ficha = 'Formulario de Inscrição em Oferta Coletiva'
-    BEGIN
-        INSERT INTO ficha_inscricao_oferta_coletiva (id, turma_ofertada) VALUES (id, turma_ofertada)
-    END
-    ELSE IF tipo_ficha = 'Ficha base'
-    BEGIN
-        INSERT INTO ficha_base (id, titulo, data_inicio, data_termino, observacoes, criado_em, criado_por, edital) VALUES (id, titulo, data_inicio, data_termino, observacoes, criado_em, criado_por, edital)
-    END
-    ELSE
-    BEGIN
-        -- Tipo de ficha inválido
-        RAISERROR('Tipo de ficha inválido!', 16, 1)
-    END
+    IF tipo_ficha = 'Formulario de Adesao a Rede Andifes' THEN
+        INSERT INTO ficha_adesao_rede_andifes (link_termo_compromisso, link_oficio_coordenador_pedagogico_geral, link_politica_linguistica, instituicao) VALUES (link_termo_compromisso, link_oficio_coordenador_pedagogico_geral, link_politica_linguistica, instituicao);
+    
+    ELSIF tipo_ficha = 'Formulario de Credenciamento de Especialistas' THEN
+        INSERT INTO ficha_credenciamento_especialista (especialista, credenciado_em) VALUES (especialista, credenciado_em);
+    
+    ELSIF tipo_ficha = 'Formulario de Credenciamento de Professores IsF' THEN
+        INSERT INTO ficha_credenciamento_professor_isf (docente_orientador, professor_isf) VALUES (docente_orientador, professor_isf);
+    
+    ELSIF tipo_ficha = 'Formulario de Adesão do Docente à Oferta Coletiva' THEN
+        INSERT INTO ficha_adesao_docente_oferta_coletiva (emissor, professor_isf, turma_ofertada) VALUES (emissor, professor_isf, turma_ofertada);
+    
+    ELSIF tipo_ficha = 'Formulario de Inscrição em Oferta Coletiva' THEN
+        INSERT INTO ficha_inscricao_oferta_coletiva (turma_ofertada) VALUES (turma_ofertada);
+    
+    ELSIF tipo_ficha = 'Ficha base' THEN
+        INSERT INTO ficha_base (titulo, data_inicio, data_termino, observacoes, criado_em, criado_por, edital) VALUES (titulo, data_inicio, data_termino, observacoes, criado_em, criado_por, edital);
+
+    END IF;
 END
+$$ LANGUAGE plpgsql;
