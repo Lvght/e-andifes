@@ -1,5 +1,5 @@
 
-CREATE OR REPLACE FUNCTION tr_perm_delegate_to_the_manager()
+CREATE OR REPLACE FUNCTION tr_perm_delegate_to_the_coord_admin()
     RETURNS trigger
     LANGUAGE plpgsql
 AS
@@ -22,4 +22,4 @@ CREATE OR REPLACE TRIGGER monitor_coord_admin
     BEFORE INSERT OR UPDATE OR DELETE
     ON coordenador_administrativo
     FOR EACH ROW
-EXECUTE FUNCTION tr_perm_delegate_to_the_manager();
+EXECUTE FUNCTION tr_perm_delegate_to_the_coord_admin();
