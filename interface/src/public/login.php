@@ -1,11 +1,25 @@
 <?php
 
+include $_ENV['HOME'] . '/inc/inject.php';
 // Envia a página de template
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     include $_ENV['HOME'] . '/helpers/twig.php';
-    $template = $twig->load('login.html');
-    echo $template->render(['erro' => $_GET['erro'] ?? null]);
-    // echo "saidps";
+    //echo $template->render(['erro' => $_GET['erro'] ?? null, 'test' => 'test']);
+
+    try {
+        $template = $twig->load('login.html');
+        $table = 'editais_abertos';
+        $query = "SELECT * FROM $table";
+        $campos = executaQueryNoBancoDeDados($query);
+        echo $template->render(['erro' => $_GET['erro'] ?? null, 'test' => 'test', 'editais' => $campos]);
+    }
+    
+    catch (Throwable $e) {
+        $error = $e->getMessage();
+        
+        $template = $twig->load('500.html');
+        echo $template->render(['error' => $error]);
+    }
 }
 
 // Recebe os dados do formulário

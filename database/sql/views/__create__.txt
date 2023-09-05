@@ -1,5 +1,5 @@
 view_admin_pessoa
 view_cursos_oc
 view_cursos
-
+view_lista_editais_em_aberto
 # end

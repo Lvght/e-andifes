@@ -10,4 +10,6 @@ especialista
 gestor_andifes
 cursos
 
+editais_abertos
+
 # end
