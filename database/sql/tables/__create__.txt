@@ -77,5 +77,6 @@ gestor_oferta_coletiva
 
 # Tabelas de histórico
 hist_curso
+hist_coordenador_adm
 
 # end

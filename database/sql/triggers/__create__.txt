@@ -5,6 +5,8 @@ after_delete_pessoa_email
 before_insert_update_data_turma
 watch_professor_isf
 VERY_SPECIAL_TRIGGER_perm_to_the_manager
+VERY_SPECIAL_TRIGGER_perm_to_the_coord_adm
+watch_coord_admin
 instead_of_insert_view_turma
 watch_turma_ofertada
 instead_of_insert_view_cursos
