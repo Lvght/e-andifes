@@ -11,3 +11,6 @@ CREATE TRIGGER instead_of_insert_view_cursos
 INSTEAD OF INSERT ON view_cursos
 FOR EACH ROW
 EXECUTE FUNCTION fn_inserir_view_cursos();
+
+
+select * from andifes.pg_catalog.pg_stat_activity
