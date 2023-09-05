@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # Use o prefixo "pr_" para procedimentos, e "fn_" para funções.
 
 pr_hello_world
@@ -18,3 +19,24 @@ pr_cadastra_ficha_adesao_docente_oferta_coletiva
 pr_cadastra_ficha_inscricao_oferta_coletiva
 pr_cadastra_turmas_oc
 # end
+=======
+# Use o prefixo "pr_" para procedimentos, e "fn_" para funções.
+
+pr_hello_world
+fn_soma
+
+fn_has_system_access
+fn_table_introspect
+fn_who_am_i
+fn_get_my_roles
+fn_parceiros_inativos
+fn_turmas_finalizadas
+
+pr_cadastra_pessoa
+pr_cadastra_edital
+pr_atualiza_turma_ofertada
+as_horario_turma_valido
+pr_cadastra_ficha_adesao_docente_oferta_coletiva
+pr_cadastra_turmas_oc
+# end
+>>>>>>> Stashed changes
