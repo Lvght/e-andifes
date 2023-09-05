@@ -5,5 +5,5 @@ Descrição: view para visualizar todas as pessoas com acesso ao sistema
 
 CREATE VIEW view_pessoas_com_acesso AS
 SELECT *
-FROM tabela_de_pessoa
+FROM pessoa
 WHERE fn_has_system_access(cpf) = true;
