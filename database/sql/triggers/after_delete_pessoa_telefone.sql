@@ -24,6 +24,21 @@ BEGIN
         CLOSE r;
     END IF;
 
+    -- Rodada de verificação.
+    PERFORM 1
+    FROM pessoa_telefone
+    WHERE cpf_pessoa = OLD.cpf_pessoa;
+
+    IF FOUND THEN
+        PERFORM 1
+        FROM pessoa_telefone
+        WHERE cpf_pessoa = OLD.cpf_pessoa
+          AND principal = TRUE;
+
+        ASSERT FOUND;
+        RAISE INFO 'Pessoa % possui ao menos um telefone principal.', OLD.cpf_pessoa;
+    END IF;
+
     RETURN OLD;
 END;
 $$;

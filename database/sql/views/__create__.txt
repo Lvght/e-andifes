@@ -1,7 +1,11 @@
 view_admin_pessoa
-view_parceiro
+view_parceiros
+
+
+view_reg_pessoa
+view_turmas_oc
+
 view_fn_turma_por_id
 view_cursos
-view_turmas_oc
 
 # end
