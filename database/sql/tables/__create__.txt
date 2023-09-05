@@ -1,5 +1,6 @@
 # Arquivo contendo a ordem de criação das tabelas.
 
+registro_auditoria
 email
 
 # Usado para identificar apps mensageiros.
@@ -77,5 +78,6 @@ gestor_oferta_coletiva
 
 # Tabelas de historico
 historico_gestor_oferta
+hist_curso
 
 # end

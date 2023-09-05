@@ -1,0 +1,53 @@
+{#
+ISTO É UM EXEMPLO.
+
+EU DEFINI UM TEMPLATE BASE QUE POSSUI ALGUNS BLOCOS CUSTOMIZÁVEIS.
+USE ELES PARA CONSTRUIR A SUA PÁGINA DE ACORDO COM OS ARTEFATOS
+QUE VOCÊ DESENVOLVEU.
+
+OS BLOCOS DISPONÍVEIS SÃO:
+
+- tituloDaPagina
+- conteudoDaPagina
+#}
+
+{% extends "inc/base.html" %}
+
+
+{% block tituloDaPagina %}
+Editais | Visão geral
+{% endblock %}
+
+{% block conteudoDaPagina %}
+<h1 class="mt-4">Cadastro de editais</h1>
+
+<hr>
+
+<form method="POST" action="/editais/cadastro_edital.php" enctype="multipart/form-data">
+    <div class="form-group pb-5">
+
+        <h2><label class="mt-4" for="arquivo">Arquivo</label></h2>
+        <p class="small">Formatos suportados: PDF, DOCX</p>
+        <input type="file" name="arquivo" id="arquivo" accept=".pdf" class="form-control" required>
+
+        <h2><label class="mt-4" for="nome">Título</label></h2>
+        <p class="small">Título que será exibido para este edital</p>
+        <input type="text" name="nome" id="nome" class="form-control" required>
+
+        <h2><label class="mt-4" for="ano">Ano</label></h2>
+        <p class="small">Ano para o qual este edital vale</p>
+        <input type="text" name="ano" id="ano" class="form-control" required>
+
+        <h2><label class="mt-4" for="semestre">Semestre</label></h2>
+        <p class="small">Usualmente 1 ou 2</p>
+        <input type="text" name="semestre" id="semestre" class="form-control" required>
+
+        <h2><label class="mt-4" for="data-publicacao">Data de publicação</label></h2>
+        <input type="date" name="data-publicacao" id="data-publicacao" class="form-control" required>
+
+        <input type="submit" class="btn btn-primary mt-4" value="Enviar">
+    </div>
+</form>
+
+<hr>
+{% endblock %}

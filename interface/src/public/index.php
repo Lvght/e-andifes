@@ -6,6 +6,13 @@
 
 
 session_start();
+
+// Verifica se já há uma sessão ativa.
+if (isset($_SESSION['username']) && isset($_SESSION['password'])) {
+    header('Location: /dashboard.php');
+    exit();
+}
+
 include $_ENV['HOME'] . '/helpers/twig.php';
 
 $template = $twig->load('index.html');

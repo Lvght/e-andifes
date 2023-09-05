@@ -11,14 +11,18 @@ BEGIN
     IF TG_OP = 'DELETE' THEN
         EXECUTE 'REVOKE gestor_andifes TO ' || quote_ident(OLD.cpf);
         RAISE NOTICE 'Cargo gestor_andifes revogado de %', OLD.cpf;
+        CALL pr_audit('REVOKE', concat('Cargo gestor_andifes revogado de ', OLD.cpf));
+
     ELSIF TG_OP = 'INSERT' OR TG_OP = 'UPDATE' THEN
         EXECUTE 'GRANT gestor_andifes TO ' || quote_ident(NEW.cpf);
         RAISE NOTICE 'Cargo gestor_andifes delegado a %', NEW.cpf;
+        CALL pr_audit('GRANT', concat('Cargo gestor_andifes emitido a ', NEW.cpf));
+
         RETURN NEW;
     END IF;
 
     RETURN OLD;
-END;
+END
 $$;
 
 CREATE OR REPLACE TRIGGER monitor_gestor_andifes
