@@ -3,5 +3,7 @@ view_cursos_oc
 view_fn_turma_por_id
 view_cursos
 view_turmas_oc
+view_pessoas_aluno_graduacao
+view_reg_pessoa
 
 # end

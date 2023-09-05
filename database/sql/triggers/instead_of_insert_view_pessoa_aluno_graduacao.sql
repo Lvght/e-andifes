@@ -1,13 +1,11 @@
-CREATE OR REPLACE FUNCTION fn_insert_aluno_graduacao()
-RETURNS TRIGGER AS $$
+CREATE OR REPLACE FUNCTION view_insert_view_pessoa_aluno_graduacao() RETURNS trigger AS $$
 BEGIN
-    INSERT INTO curso (nome, codigo, idioma, carga_horaria, link_plano_de_ensino)
-    VALUES (NEW.nome, NEW.codigo, NEW.idioma, NEW.carga_horaria, NEW.link_plano_de_ensino);
-    RETURN NEW;
+  INSERT INTO turma_ofertada_idioma (cpf, link_certPOCA, link_vinculoFile, link_termoCompromisso, link_resultadoSelecao) 
+  VALUES (NEW.cpf, NEW.link_certPOCA, NEW.link_vinculoFile, NEW.link_termoCompromisso, NEW.link_resultadoSelecao);
+  RETURN NULL;
 END;
 $$ LANGUAGE plpgsql;
 
-CREATE TRIGGER instead_of_insert_view_pessoa_aluno_graduacao
-INSTEAD OF INSERT ON view_pessoa_aluno_graduacao
-FOR EACH ROW
-EXECUTE FUNCTION fn_insert_aluno_graduacao();
+CREATE TRIGGER view_insert_view_pessoa_aluno_graduacao_trigger
+INSTEAD OF INSERT ON view_pessoas_aluno_graduacao
+FOR EACH ROW EXECUTE PROCEDURE view_insert_view_pessoa_aluno_graduacao();
