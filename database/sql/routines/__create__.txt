@@ -9,6 +9,7 @@ fn_who_am_i
 fn_get_my_roles
 fn_parceiros_inativos
 fn_turmas_finalizadas
+fn_edital_adesao_a_rede_andifes
 
 pr_cadastra_pessoa
 pr_cadastra_edital
@@ -16,4 +17,5 @@ pr_atualiza_turma_ofertada
 as_horario_turma_valido
 pr_cadastra_ficha_adesao_docente_oferta_coletiva
 pr_cadastra_turmas_oc
+pr_cadastra_ficha_adesao_rede_andifes
 # end

@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS especialista
     setor_atuacao VARCHAR(255) NOT NULL,
     lattes VARCHAR(255) UNIQUE NOT NULL,
     maior_titulacao VARCHAR(100) NOT NULL,
+    ativo BOOLEAN DEFAULT TRUE,
 
     CONSTRAINT fk_especialista_pessoa
         FOREIGN KEY (cpf)
