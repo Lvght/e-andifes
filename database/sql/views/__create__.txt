@@ -2,6 +2,7 @@ view_admin_pessoa
 
 view_reg_pessoa
 
+view_parceiro
 view_fn_turma_por_id
 view_cursos
 
