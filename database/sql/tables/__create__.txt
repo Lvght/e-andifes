@@ -1,5 +1,6 @@
 # Arquivo contendo a ordem de criação das tabelas.
 
+registro_auditoria
 email
 
 # Usado para identificar apps mensageiros.

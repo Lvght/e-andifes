@@ -1,8 +1,12 @@
 view_admin_pessoa
-view_cursos_oc
+view_parceiros
+
+
+view_reg_pessoa
+view_turmas_oc
+
 view_fn_turma_por_id
 view_cursos
 view_lista_editais_em_aberto
-view_turmas_oc
 
 # end
