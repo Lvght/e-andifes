@@ -6,4 +6,8 @@ INSERT INTO especialista
 -- FIXME O valor de cert_poca deveria ser um arquivo?
 VALUES ('1', 'Universidade', 'Maria Sobrenome', 'O que deveria ter aqui???', 'https://www.lattes.cnpq.br/',
         'Professor', 'Letras',
+        'Doutorado'),
+        
+('3', 'Universidade', 'Nome Mae', 'O que deveria ter aqui?????', 'https://www.lattes.cnpq.br/?',
+        'Professor', 'Letras',
         'Doutorado');

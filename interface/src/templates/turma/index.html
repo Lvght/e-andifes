@@ -1,0 +1,12 @@
+{# ISTO É UM EXEMPLO. EU DEFINI UM TEMPLATE BASE QUE POSSUI ALGUNS BLOCOS
+CUSTOMIZÁVEIS. USE ELES PARA CONSTRUIR A SUA PÁGINA DE ACORDO COM OS ARTEFATOS
+QUE VOCÊ DESENVOLVEU. OS BLOCOS DISPONÍVEIS SÃO: - tituloDaPagina -
+conteudoDaPagina #} {% extends "inc/base.html" %} {% block tituloDaPagina %}
+Registro de Auditoria {% endblock %} {% block conteudoDaPagina %}
+<h1 class="mt-4">Turma oferta coletiva</h1>
+<p class="small">Turmas da oferta coletiva.</p>
+
+<hr />
+
+{{ include('inc/tabela.html', { 'COLUNAS_DA_TABELA': keys, 'CONTEUDO_DA_TABELA':
+result }) }} {% endblock %}
