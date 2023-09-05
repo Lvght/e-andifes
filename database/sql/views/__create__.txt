@@ -2,5 +2,6 @@ view_admin_pessoa
 view_fn_turma_por_id
 view_cursos
 view_turmas_oc
+view_pessoas_especialista
 
 # end

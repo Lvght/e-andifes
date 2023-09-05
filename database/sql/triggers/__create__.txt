@@ -9,5 +9,7 @@ instead_of_insert_view_turma
 watch_turma_ofertada
 instead_of_insert_view_cursos
 watch_curso
+instead_of_insertview_pessoas_especialista
+watch_view_pessoas_especialista
 
 # end
