@@ -8,9 +8,8 @@ fn_table_introspect
 fn_who_am_i
 fn_get_my_roles
 fn_parceiros_inativos
-li
 fn_visualiza_status_turma
-fn_watch_gestor_oferta
+fn_watch_gestor_oferta_coletiva
 pr_adicionar_tipo_ficha
 
 fn_parceiros_ativos
