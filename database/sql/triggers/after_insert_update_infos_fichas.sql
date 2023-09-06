@@ -8,13 +8,14 @@ que rastreará qualquer operação de INSERT, UPDATE ou DELETE na tabela.
 */
 
 CREATE OR REPLACE ASSERTION ficha_ativa
-CHECK (NOT EXISTS (
-    SELECT *
-    FROM ficha_base
-    WHERE current_date > data_termino
-)
+CHECK (
+    current_date <= ALL (
+        SELECT data_termino
+        FROM ficha_base
+    )
 );
 
+#TriggerDML
 CREATE TABLE ficha_base_audit (
     id SERIAL PRIMARY KEY,
     acao VARCHAR(10),

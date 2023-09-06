@@ -13,14 +13,15 @@ SELECT
     semestre,
     publicado_por,
     criado_em,
-    criado_por,
-FROM edital.sql 
+    criado_por
+FROM edital;
 
-CREATE OR REPLACE FUNCTION view_fn_modal_edital(id_edital integer)
+CREATE OR REPLACE FUNCTION view_fn_modal_edital(id_edital INTEGER)
 RETURNS TABLE (id integer, data_publicacao date, nome varchar(255), ano integer, semestre integer, publicado_por char(11), criado_em timestamp, criado_por varchar)
 AS $$ 
 BEGIN
     RETURN QUERY
-    SELECT * FROM view_modal_edital
-    WHERE view_modal_edital.id = id_edital;
+    SELECT * FROM edital
+    WHERE edital.id = id_edital;
 END;
+$$ LANGUAGE plpgsql;
