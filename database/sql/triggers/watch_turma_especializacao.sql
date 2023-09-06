@@ -1,4 +1,3 @@
-
 --Autor: Lucas Maciel Balieiro
 CREATE OR REPLACE FUNCTION warn_truncate_turma_especializacao() RETURNS trigger AS $$
 BEGIN
