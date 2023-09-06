@@ -18,7 +18,7 @@ cursor_e_deferido CURSOR FOR
 rec_deferimento_edital deferimento_edital%ROWTYPE;
 
 BEGIN
-OPEN cursor_e_deferido
+OPEN cursor_e_deferido;
 FETCH cursor_e_deferido INTO rec_deferimento_edital;
 IF NOT FOUND THEN
     RAISE EXCEPTION 'Nao foram encontrados editais deferidos para %', p_busca;
