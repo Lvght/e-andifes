@@ -25,8 +25,8 @@ CREATE TABLE pessoa
 
     sobrenome VARCHAR GENERATED ALWAYS AS (
         CASE
-            WHEN nome_social IS NULL THEN SPLIT_PART(nome_registro, ' ', 2)
-            ELSE SPLIT_PART(nome_social, ' ', 2)
+            WHEN nome_social IS NULL THEN array_to_string(regexp_split_to_array(nome_registro, E'\\\\s+')[2:], ' ')
+            ELSE array_to_string(regexp_split_to_array(nome_social, E'\\\\s+')[2:], ' ')
         END
     ) STORED,
 
