@@ -7,15 +7,37 @@ trigger DML registra as modificações feitas na tabela "ficha_base" em uma tabe
 que rastreará qualquer operação de INSERT, UPDATE ou DELETE na tabela.
 */
 
---sintática não funciona no postgress
---CREATE OR REPLACE ASSERTION ficha_ativa
---CHECK (
---    current_date <= ALL (
---    SELECT data_termino
---        FROM ficha_base
---    )
---);
+/* esta sintaxe não funciona no postgres 9.6
+CREATE OR REPLACE FUNCTION ficha_ativa()
+CHECK (
+    current_date <= ALL (
+    SELECT data_termino
+        FROM ficha_base
+    )
+);
+*/
 
+/*
+--Assertion
+CREATE OR REPLACE FUNCTION ficha_ativa()
+    RETURNS trigger
+    LANGUAGE plpgsql
+AS
+$$
+BEGIN
+    IF NEW.data_termino <= current_date THEN
+        RAISE EXCEPTION 'Este edital já encerrou';
+    END IF;
+    RETURN NEW;
+END;
+$$ 
+
+CREATE OR REPLACE TRIGGER tr_ficha_ativa
+BEFORE INSERT OR UPDATE ON ficha_base
+FOR EACH ROW
+WHEN (NEW.data_termino <= CURRENT_DATE)
+EXECUTE FUNCTION ficha_ativa();
+*/
 --TriggerDML
 CREATE TABLE ficha_base_audit (
     id SERIAL PRIMARY KEY,
