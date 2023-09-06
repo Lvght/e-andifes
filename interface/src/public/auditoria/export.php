@@ -25,7 +25,7 @@ $out = fopen('php://output', 'w');
 fputcsv($out, $keys);
 
 foreach ($result as $row) {
-    fputcsv($out, $row);
+    fputcsv($out, $row, ',', " ");
 }
 
 fclose($out);

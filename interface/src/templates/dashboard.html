@@ -25,18 +25,9 @@
 	<ol class="breadcrumb mb-4">
 		<li class="breadcrumb-item active">Página inicial</li>
 	</ol>
-	<div class="card mb-4">
-		<div class="card-header">
-			<i class="fas fa-person me-1"></i>
-			Pessoas cadastradas no sistema
-		</div>
-		<div
-			class="card-body">
-			<!--
-				Para renderizar uma tabela, apenas adapte a linha abaixo.
-				Os valores devem vir do script PHP.
-			-->
-			{{ include('inc/tabela.html', { 'COLUNAS_DA_TABELA': keys, 'CONTEUDO_DA_TABELA': pessoas }) }}
-		</div>
-	</div>
+
+	<hr>
+
+	<p>Use o menu lateral para acessar as funcionalidades do sistema. Clique em seu nome no canto superior direito para sair.</p>
+
 {% endblock %}

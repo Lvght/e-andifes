@@ -24,10 +24,14 @@ Registro de Auditoria
 
 <button class="btn btn-success" onclick="window.location.href='/auditoria/export.php'">
     <i class="fa fa-table" aria-hidden="true"></i>
-    Exportar tudo para Excel
+    Exportar tudo para CSV
 </button>
 <hr>
 
-{{ include('inc/tabela.html', { 'COLUNAS_DA_TABELA': keys, 'CONTEUDO_DA_TABELA': result }) }}
+{{ include('inc/tabela.html', {
+    'COLUNAS_DA_TABELA': keys,
+    'CONTEUDO_DA_TABELA': result,
+    'DESTINO': '/auditoria/?id=$'
+}) }}
 
 {% endblock %}

@@ -34,7 +34,11 @@ Parceiros | Visão geral
             Para renderizar uma tabela, apenas adapte a linha abaixo.
             Os valores devem vir do script PHP.
         -->
-        {{ include('inc/tabela.html', { 'COLUNAS_DA_TABELA': keys, 'CONTEUDO_DA_TABELA': parceiros }) }}
+        {{ include('inc/tabela.html', {
+            'COLUNAS_DA_TABELA': keys,
+            'CONTEUDO_DA_TABELA': parceiros,
+            'DESTINO': '/parceiros/?id=$'
+        }) }}
     </div>
 </div>
 
