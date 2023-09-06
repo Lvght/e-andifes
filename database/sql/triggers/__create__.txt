@@ -28,4 +28,7 @@ watch_aluno_comunidade_academica
 watch_pessoa
 watch_aluno_graduacao
 
+watch_gestor_andifes
+watch_edital
+
 # end

@@ -20,16 +20,6 @@ Pessoas | Visão geral
 
 {% block conteudoDaPagina %}
 
-{% for f in campos %}
-<form>
-    <div class="form-group">
-        {{ include('inc/campo_form.html', {
-        'nome_coluna': f.column_name,
-        'tipo': f.data_type,
-        'valor': instancia[f.column_name],
-        }) }}
-    </div>
-</form>
-{% endfor %}
+{{ include('inc/tabela.html', { 'COLUNAS_DA_TABELA': keys, 'CONTEUDO_DA_TABELA': pessoas }) }}
 
 {% endblock %}
