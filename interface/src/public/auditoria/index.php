@@ -11,5 +11,7 @@ if (!in_array('gestor_andifes', $_SESSION['cargos'])) {
     exit();
 }
 
+$query = pg_query(getConnection(), "SELECT * FROM registro_auditoria ORDER BY id DESC");
+$result = pg_fetch_all($query);
 $template = $twig->load('auditoria/index.html');
-echo $template->render();
+echo $template->render(['result' => $result, 'keys' => array_keys($result[0])]);
