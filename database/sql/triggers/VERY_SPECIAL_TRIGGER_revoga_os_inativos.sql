@@ -4,7 +4,7 @@ BEGIN
     -- Verifique se o usuário se tornou inativo (status_inativo = true)
     IF NEW.status_inativo = true THEN
 
-        #Precisa criar esse atributo na tabela pessoa 
+        -- Precisa criar esse atributo na tabela pessoa 
         UPDATE usuarios SET acesso_revogado = TRUE WHERE cpf = NEW.cpf;
     END IF;
     RETURN NEW;
