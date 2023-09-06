@@ -15,6 +15,9 @@ window.addEventListener('DOMContentLoaded', event => {
             event.preventDefault();
             //
             console.log(rowIndex)
+            const row = table.dom.querySelector("tbody").children[rowIndex]
+            const cell = row.querySelector("td") // usando a primeira coluna como ID
+            window.location = table.dom.getAttribute("data-link").replace("$", cell.innerText)
         });
     }
 });
