@@ -30,5 +30,6 @@ pr_cadastra_ficha_adesao_docente_oferta_coletiva
 pr_cadastra_ficha_inscricao_oferta_coletiva
 pr_cadastra_parceiro
 pr_cadastra_turmas_oc
+pr_edita_perfil_gestor
 
 # end
