@@ -1,3 +1,4 @@
+--criacao da funcao e seus parametros
 CREATE OR REPLACE FUNCTION fn_todos_parceiros()
 RETURNS TABLE (
     cnpj VARCHAR(18),
@@ -11,6 +12,7 @@ RETURNS TABLE (
     status VARCHAR(20)
 ) AS $$
 DECLARE
+    -- declaracao do cursor
     cparceirostodos CURSOR FOR
         SELECT
             p.cnpj,
@@ -26,8 +28,10 @@ DECLARE
             parceiro p;
     registro_parceiro_todos RECORD;
 BEGIN
+    -- abre o cursor
     OPEN cparceirostodos;
 
+    -- Loop para percorrer todos
     LOOP
         FETCH cparceirostodos INTO registro_parceiro_todos;
         EXIT WHEN NOT FOUND;
@@ -41,7 +45,7 @@ BEGIN
         cpf := registro_parceiro_todos.cpf;
         id := registro_parceiro_todos.id;
         status := registro_parceiro_todos.status;
-
+        --retorna os parceiros
         RETURN NEXT;
     END LOOP;
 
