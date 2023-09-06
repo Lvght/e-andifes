@@ -49,7 +49,7 @@ BEGIN
 END;
 $$;
 
-CREATE OR REPLACE TRIGGER after_insert_view_admin_pessoa
+CREATE OR REPLACE TRIGGER instead_of_insert_view_admin_pessoa
     INSTEAD OF INSERT
     ON view_admin_pessoa
     FOR EACH ROW

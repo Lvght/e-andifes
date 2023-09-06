@@ -22,7 +22,7 @@ BEGIN
 END;
 $$;     
 
-CREATE OR REPLACE TRIGGER after_delete_pessoa_telefone
+CREATE OR REPLACE TRIGGER after_delete_pessoa_email
     AFTER DELETE ON pessoa_email
     FOR EACH ROW
     EXECUTE FUNCTION tr_before_delete_pessoa_email();
