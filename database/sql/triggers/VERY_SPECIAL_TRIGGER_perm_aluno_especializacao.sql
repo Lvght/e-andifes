@@ -3,6 +3,7 @@ Autor: Alisson Nunes (RA:725862)
 Descrição: Este é um gatilho muito especial para alunos de especialização
 */
 
+/*
 CREATE OR REPLACE FUNCTION tr_perm_delegate_to_aluno_especializacao()
     RETURNS trigger
     LANGUAGE plpgsql
@@ -28,3 +29,4 @@ CREATE OR REPLACE TRIGGER monitor_aluno_especializacao
     ON especialista
     FOR EACH ROW
 EXECUTE FUNCTION tr_perm_delegate_to_aluno_especializacao();
+*/

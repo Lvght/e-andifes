@@ -1,4 +1,4 @@
-<table id="datatablesSimple">
+<table id="datatablesSimple" data-link="{{ DESTINO }}">
     <thead>
         <tr>
             {% for coluna in COLUNAS_DA_TABELA %}
@@ -17,7 +17,15 @@
         {% for entrada in CONTEUDO_DA_TABELA %}
             <tr>
                 {% for coluna in COLUNAS_DA_TABELA %}
+                    {% if coluna == "Abrir" %}
+                        <td>
+                            <a href="{{ entrada[coluna] }}" class="btn btn-primary btn-sm">Abrir</a>
+                        </td>
+                    {% endif %}
+
+                    {% if coluna != "Abrir" %}
                     <td>{{ entrada[coluna] }}</td>
+                    {% endif %}
                 {% endfor %}
             </tr>
         {% endfor %}

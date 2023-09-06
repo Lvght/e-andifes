@@ -3,4 +3,4 @@
 -- histórico no database --
 
 INSERT INTO coordenador_administrativo(cpf,lattes, funcao_ies, certificadopoca) 
-    VALUES (1, 'teste', 'coord', 'aa');
+    VALUES (3, 'teste', 'coord', 'aa');

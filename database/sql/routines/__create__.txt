@@ -17,6 +17,7 @@ pr_adicionar_tipo_ficha
 
 fn_parceiros_ativos
 fn_turmas_finalizadas
+fn_tipos_fichas_cadastradas
 fn_visu_nums
 
 pr_cadastra_pessoa
@@ -30,5 +31,6 @@ pr_cadastra_ficha_adesao_docente_oferta_coletiva
 pr_cadastra_ficha_inscricao_oferta_coletiva
 pr_cadastra_parceiro
 pr_cadastra_turmas_oc
+pr_edita_perfil_gestor
 
 # end

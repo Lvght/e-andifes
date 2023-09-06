@@ -36,7 +36,11 @@
 				Para renderizar uma tabela, apenas adapte a linha abaixo.
 				Os valores devem vir do script PHP.
 			-->
-			{{ include('inc/tabela.html', { 'COLUNAS_DA_TABELA': keys, 'CONTEUDO_DA_TABELA': pessoas }) }}
+			{{ include('inc/tabela.html', {
+				'COLUNAS_DA_TABELA': keys,
+				'CONTEUDO_DA_TABELA': pessoas,
+			    'DESTINO': '/cursos.php?id=$'
+			}) }}
 		</div>
 	</div>
 {% endblock %}

@@ -29,4 +29,7 @@ Editais | Visão geral
 
 <h1 class="mt-4">Visão geral dos editais</h1>
 <hr>
+
+{{ include('inc/tabela.html', { 'COLUNAS_DA_TABELA': keys, 'CONTEUDO_DA_TABELA': editais }) }}
+
 {% endblock %}
