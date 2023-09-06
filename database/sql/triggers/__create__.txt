@@ -9,10 +9,13 @@ instead_of_insert_view_turma_especifica_oferta_coletiva
 
 watch_professor_isf
 VERY_SPECIAL_TRIGGER_perm_to_the_manager
+VERY_SPECIAL_TRIGGER_perm_gestor_oferta_coletiva
 instead_of_insert_view_turma
 watch_turma_ofertada
+instead_of_insert_view_pessoa_aluno_graduacao
 instead_of_insert_view_cursos
 watch_curso
+watch_aluno_comunidade_academica
 watch_pessoa
 
 # end

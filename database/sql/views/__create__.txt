@@ -1,10 +1,12 @@
 view_admin_pessoa
-view_turma_especifica_oferta_coletiva
-view_parceiros
-view_reg_pessoa
-view_turmas_oc
 view_fn_turma_por_id
 view_cursos
+view_turmas_oc
+view_pessoas_aluno_graduacao
+view_reg_pessoa
+
+view_turma_especifica_oferta_coletiva
+view_parceiros
 view_lista_editais_em_aberto
 
 # end
