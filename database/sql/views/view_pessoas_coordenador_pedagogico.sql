@@ -16,9 +16,8 @@ SELECT
     p.endereco_id AS endereco_id_pessoa,
     p.primeiro_nome AS primeiro_nome_pessoa,
     p.sobrenome AS sobrenome_pessoa,
-    p.email,
-    p.telefone,
-    ga.papel_atuacao AS papel_gestor
+    ga.papel_atuacao AS papel_gestor,
+    p.status_inativo AS status_inativo_pessoa
 FROM
     coordenador_administrativo ca
 JOIN
