@@ -6,7 +6,7 @@ BEGIN
     DELETE FROM turma_ofertada_idioma WHERE id = OLD.id;
     RETURN NEW;
 END;
-$$ 
+$$; 
 
 CREATE OR REPLACE TRIGGER instead_of_delete_view_turmas
     INSTEAD OF DELETE ON turma_ofertada_idioma
