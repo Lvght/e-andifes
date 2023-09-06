@@ -8,6 +8,7 @@ before_insert_update_data_turma
 before_insert_update_numero_inscritos
 instead_of_insert_view_turma_especifica_oferta_coletiva
 
+watch_docente_especialista
 watch_professor_isf
 VERY_SPECIAL_TRIGGER_perm_to_the_manager
 instead_of_insert_view_turma
