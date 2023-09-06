@@ -3,3 +3,4 @@ logs/
 schema/
 __pycache__/
 .venv/
+/vendor/
