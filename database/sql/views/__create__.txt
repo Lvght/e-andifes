@@ -6,6 +6,7 @@ view_formularios_em_andamentos
 view_cursos_oc
 view_turmas_oc
 view_pessoas_aluno_graduacao
+view_pessoas_coordenador_pedagogico
 view_pessoas_com_acesso
 view_reg_pessoa
 
