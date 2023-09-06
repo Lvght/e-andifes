@@ -10,6 +10,7 @@ fn_get_my_roles
 fn_parceiros_inativos
 fn_visualiza_status_turma
 fn_watch_gestor_oferta_coletiva
+fn_todos_parceiros
 pr_adicionar_tipo_ficha
 
 fn_parceiros_ativos
@@ -18,6 +19,7 @@ fn_visu_nums
 
 pr_cadastra_pessoa
 pr_cadastra_edital
+pr_cadastra_curso_oferta
 pr_atualiza_turma_ofertada
 as_horario_turma_valido
 pr_cadastra_ficha_credenciamento_especialista
