@@ -12,7 +12,9 @@ instead_of_insert_view_ficha
 watch_professor_isf
 VERY_SPECIAL_TRIGGER_perm_aluno_especializacao
 VERY_SPECIAL_TRIGGER_perm_to_the_manager
+VERY_SPECIAL_TRIGGER_perm_to_the_coord_adm
 VERY_SPECIAL_TRIGGER_perm_gestor_oferta_coletiva
+watch_coord_admin
 instead_of_insert_view_turma
 watch_disciplina_especializacao
 watch_turma_ofertada
@@ -21,9 +23,9 @@ instead_of_insert_view_cursos
 watch_curso
 watch_parceiro
 instead_of_update_view_pessoas_com_acesso_ao_sistema
+instead_of_delete_editais_abertos
 watch_aluno_comunidade_academica
 watch_pessoa
 watch_aluno_graduacao
-
 
 # end

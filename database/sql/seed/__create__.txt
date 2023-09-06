@@ -11,6 +11,7 @@ gestor_andifes
 parceiro
 edital
 cursos
+coord_admin
 
 editais_abertos
 
