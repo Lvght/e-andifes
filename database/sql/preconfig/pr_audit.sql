@@ -1,8 +1,8 @@
 -- Procedimento para cadastrar informações no registro de auditoria
 CREATE TYPE tipo_acao_auditoria AS ENUM ('INSERT', 'UPDATE', 'DELETE', 'REVOKE', 'GRANT', 'OTHER');
 
-CREATE PROCEDURE pr_audit(op tipo_acao_auditoria, msg TEXT)
-LANGUAGE plpgsql
+CREATE OR REPLACE PROCEDURE pr_audit(op tipo_acao_auditoria, msg TEXT)
+LANGUAGE plpgsql SECURITY DEFINER
 AS $$
 DECLARE ip varchar;
 BEGIN
