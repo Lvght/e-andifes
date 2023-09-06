@@ -36,6 +36,7 @@ CREATE TABLE pessoa
     endereco_rua varchar(50) NOT NULL,
     endereco_bairro VARCHAR(50) NOT NULL,
     endereco_id  INTEGER NOT NULL,
+    status_inativo BOOLEAN DEFAULT false,
 
     CONSTRAINT fk_endereco
         FOREIGN KEY (endereco_id)
