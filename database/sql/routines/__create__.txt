@@ -8,6 +8,7 @@ fn_table_introspect
 fn_who_am_i
 fn_get_my_roles
 fn_parceiros_inativos
+fn_parceiros_pendentes
 fn_visualiza_status_turma
 fn_watch_gestor_oferta_coletiva
 pr_adicionar_tipo_ficha
@@ -18,6 +19,7 @@ fn_turmas_finalizadas
 pr_cadastra_pessoa
 pr_cadastra_edital
 pr_atualiza_turma_ofertada
+pr_busca_parceiros
 as_horario_turma_valido
 pr_cadastra_ficha_adesao_docente_oferta_coletiva
 pr_cadastra_parceiro
