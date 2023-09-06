@@ -3,23 +3,37 @@
 pr_hello_world
 fn_soma
 
+as_cnpj_valido
 fn_has_system_access
 fn_table_introspect
 fn_who_am_i
 fn_get_my_roles
 fn_parceiros_inativos
+fn_parceiros_pendentes
+fn_visualiza_status_turma
+fn_watch_gestor_oferta_coletiva
+fn_todos_parceiros
+pr_adicionar_tipo_ficha
+
 fn_parceiros_ativos
 fn_turmas_finalizadas
+fn_tipos_fichas_cadastradas
+fn_visu_nums
 
 pr_cadastra_pessoa
 pr_cadastra_edital
+pr_cadastra_curso_oferta
 pr_atualiza_turma_ofertada
+pr_busca_parceiros
 as_horario_turma_valido
+pr_cadastra_ficha_credenciamento_especialista
 pr_cadastra_ficha_adesao_docente_oferta_coletiva
+pr_cadastra_ficha_inscricao_oferta_coletiva
 pr_cadastra_parceiro
 pr_cadastra_turmas_oc
 pr_filtra_edital_por_ano
 pr_cadastra_ficha_adesao_rede_andifes
 pr_cadastra_ficha_credenciamento_professor
+pr_edita_perfil_gestor
 
 # end
