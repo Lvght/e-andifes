@@ -29,7 +29,7 @@ BEGIN
     VALUES (NEW.data_publicacao, NEW.nome, NULL, NEW.ano, NEW.semestre, NEW.publicado_por, NEW.criado_em, NEW.criado_por);
     RETURN NEW;
 END;
-$$
+$$;
 
 CREATE OR REPLACE TRIGGER instead_of_insert_view_edital
     INSTEAD OF INSERT ON view_editais
