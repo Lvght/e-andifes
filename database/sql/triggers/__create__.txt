@@ -11,4 +11,5 @@ instead_of_insert_view_cursos
 watch_curso
 watch_pessoa
 after_insert_update_infos_fichas
+instead_of_insert_view_modal_edital.sql
 # end

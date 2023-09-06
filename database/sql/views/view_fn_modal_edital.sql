@@ -1,6 +1,8 @@
 /*
 Autor: Caio Ueda Sampaio (RA:802215)
 Descrição: View do modal de um edital específico dado seu id
+
+função para buscar o edital por id
 */
 CREATE VIEW view_modal_edital AS
 SELECT
