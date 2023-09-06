@@ -3,6 +3,7 @@
 pr_hello_world
 fn_soma
 
+as_cnpj_valido
 fn_has_system_access
 fn_table_introspect
 fn_who_am_i

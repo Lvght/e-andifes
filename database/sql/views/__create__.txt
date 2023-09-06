@@ -1,6 +1,4 @@
 view_admin_pessoa
-view_turma_especifica_oferta_coletiva
-view_parceiros
 view_pessoas_orientador
 view_fn_turma_por_id
 view_cursos
