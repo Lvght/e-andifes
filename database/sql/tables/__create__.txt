@@ -79,5 +79,6 @@ gestor_oferta_coletiva
 # Tabelas de historico
 historico_gestor_oferta
 hist_curso
+hist_aluno_graduacao
 
 # end
