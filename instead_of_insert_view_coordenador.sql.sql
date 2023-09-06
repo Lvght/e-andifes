@@ -2,7 +2,7 @@
 CREATE OR REPLACE FUNCTION atualiza_view_coordenador_pedagogico() RETURNS TRIGGER AS $$
 BEGIN
     -- Atualize a view view_coordenador_pedagogico com as informações inseridas
-    REFRESH MATERIALIZED VIEW view_coordenador_pedagogico;
+    REFRESH MATERIALIZED VIEW view_pessoas_coordenador_pedagogico;
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
