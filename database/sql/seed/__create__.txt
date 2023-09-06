@@ -8,5 +8,9 @@ pessoa_telefone
 
 especialista
 gestor_andifes
+edital
+cursos
+
+editais_abertos
 
 # end
