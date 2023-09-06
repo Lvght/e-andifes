@@ -4,6 +4,17 @@ window.addEventListener('DOMContentLoaded', event => {
 
     const datatablesSimple = document.getElementById('datatablesSimple');
     if (datatablesSimple) {
-        new simpleDatatables.DataTable(datatablesSimple);
+        const table = new simpleDatatables.DataTable(datatablesSimple);
+
+        table.on('datatable.search', function(query, matched) {
+            //
+            console.log(query)
+        });
+
+        table.on("datatable.selectrow", (rowIndex, event) => {
+            event.preventDefault();
+            //
+            console.log(rowIndex)
+        });
     }
 });
