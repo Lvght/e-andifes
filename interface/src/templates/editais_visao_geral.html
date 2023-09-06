@@ -19,6 +19,14 @@ Editais | Visão geral
 {% endblock %}
 
 {% block conteudoDaPagina %}
+
+{% if cadastro_ok %}
+
+<div class="alert alert-success mt-5 mb-5" role="alert">
+    Edital cadastrado com sucesso!
+</div>
+{% endif %}
+
 <h1 class="mt-4">Visão geral dos editais</h1>
 <hr>
 {% endblock %}

@@ -21,5 +21,13 @@ Registro de Auditoria
 {% block conteudoDaPagina %}
 <h1 class="mt-4">Registro de auditoria</h1>
 <p class="small">O registro de auditoria permite visualizar o que está ocorrendo no sistema.</p>
+
+<button class="btn btn-success" onclick="window.location.href='/auditoria/export.php'">
+    <i class="fa fa-table" aria-hidden="true"></i>
+    Exportar tudo para Excel
+</button>
 <hr>
+
+{{ include('inc/tabela.html', { 'COLUNAS_DA_TABELA': keys, 'CONTEUDO_DA_TABELA': result }) }}
+
 {% endblock %}
