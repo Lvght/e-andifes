@@ -16,7 +16,8 @@ SELECT
   fb.data_termino, 
   fb.id,
   ed.semestre,
-  ed.ano
+  ed.ano,
+  fb.edital
 FROM 
   ficha_base fb
 JOIN
