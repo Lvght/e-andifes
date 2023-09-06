@@ -1,17 +1,11 @@
+-- Criação da view
 CREATE OR REPLACE VIEW view_cursos_oc AS
 SELECT
-    t.id,
-    t.dia_semana,
-    t.horario_inicio,
-    t.idioma,
-    t.id_curso,
-    t.dia_horario_aulas,
-    t.titulo,
-    t.data_inicio,
-    t.data_fim,
-    t.tipo_oferta,
-    t.horario_termino,
-    t.numero_inscritos,
-    t.cpf_professor_isf
-FROM
-    turma_ofertada_idioma t;
+    c.id AS curso_id,
+    c.nome AS nome_curso,
+    c.codigo AS codigo_curso,
+    c.idioma AS idioma_curso,
+    c.carga_horaria AS carga_horaria_curso,
+    t.id AS turma_id
+FROM curso c
+INNER JOIN turma_ofertada_idioma t ON c.id = t.id_curso;
