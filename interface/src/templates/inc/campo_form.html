@@ -1,0 +1,14 @@
+{% if tipo == 'integer' %}
+    {% set form_type = 'number' %}
+{% endif %}
+
+{% if tipo starts with 'character' %}
+    {% set form_type = 'text' %}
+{% endif %}
+
+<label class="mt-4" for="{{ nome_coluna }}">{{ nome_coluna }}</label>
+<input type="{{form_type}}"
+    class="form-control"
+    id="{{ nome_coluna }}"
+    value="{{ valor }}"
+    placeholder="{{ nome_coluna }}">

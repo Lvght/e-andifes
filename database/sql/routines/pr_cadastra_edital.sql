@@ -1,12 +1,12 @@
-CREATE PROCEDURE pr_cadastra_edital(
+CREATE OR REPLACE PROCEDURE pr_cadastra_edital(
     nome VARCHAR,
-    data DATE,
+    arquivo BYTEA,
+    data_publicacao DATE,
     ano INTEGER,
     semestre INTEGER)
     LANGUAGE sql
 AS
 $$
-    INSERT INTO edital (nome, data, ano, semestre, publicado_por, conteudo)
-    VALUES (nome, data, ano, semestre, CURRENT_USER, '');
+INSERT INTO edital (nome, data_publicacao, ano, semestre, publicado_por, arquivo)
+VALUES (nome, data_publicacao, ano, semestre, CURRENT_USER, arquivo);
 $$;
-

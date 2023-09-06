@@ -4,5 +4,6 @@
 
 modify_routine_priv
 create_roles
+pr_audit
 
 # end

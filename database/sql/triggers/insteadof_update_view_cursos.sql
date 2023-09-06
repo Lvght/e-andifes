@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION tr_instead_of_view_cursos()
+CREATE OR REPLACE FUNCTION tr_instead_of_update_view_cursos()
 RETURNS TRIGGER AS $$
 DECLARE
     -- Declaração do cursor.
@@ -56,4 +56,4 @@ CREATE TRIGGER instead_of_update_view_cursos
 INSTEAD OF INSERT OR UPDATE OR DELETE
 ON view_cursos
 FOR EACH ROW
-EXECUTE FUNCTION tr_instead_of_view_cursos();
+EXECUTE FUNCTION tr_instead_of_update_view_cursos();
