@@ -4,6 +4,7 @@ view_cursos
 view_turmas_oc
 view_pessoas_aluno_graduacao
 view_pessoas_com_acesso
+view_pessoas_gestor_andifes
 view_reg_pessoa
 
 view_turma_especifica_oferta_coletiva
