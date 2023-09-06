@@ -1,6 +1,4 @@
 
-after_delete_pessoa_telefone
-after_insert_update_pessoa_telefone
 before_insert_pessoa_email
 
 after_insert_update_pessoa_telefone
