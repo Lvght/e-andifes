@@ -11,6 +11,7 @@ DECLARE
     old_nome VARCHAR;
     old_codigo VARCHAR;
     old_idioma VARCHAR;
+    old_id INT;
 BEGIN
     -- Inicializa as variáveis com os valores atuais da tabela subjacente.
     OPEN curso_cursor;
