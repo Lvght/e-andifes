@@ -38,5 +38,6 @@ instead_of_delete_editais_abertos
 watch_aluno_comunidade_academica
 watch_pessoa
 watch_aluno_graduacao
+instead_of_delete_view_turmas
 
 # end
