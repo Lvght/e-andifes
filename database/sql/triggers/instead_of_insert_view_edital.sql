@@ -43,7 +43,7 @@ BEGIN
     VALUES (NEW.id, NEW.data_publicacao, NEW.nome, NULL, NEW.ano, NEW.semestre, cpf_buscado, CURRENT_TIMESTAMP, CURRENT_USER);
     RETURN NEW;
 END;
-$$
+$$ LANGUAGE plpgsql;
 
 CREATE OR REPLACE TRIGGER instead_of_insert_view_edital
     INSTEAD OF INSERT ON view_editais
