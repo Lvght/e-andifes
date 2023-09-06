@@ -12,4 +12,5 @@ watch_curso
 watch_pessoa
 after_insert_update_infos_fichas
 instead_of_insert_view_modal_edital.sql
+watch_aluno_graduacao.sql
 # end
