@@ -34,11 +34,6 @@ BEGIN
         DELETE FROM curso WHERE id = OLD.id;
     END IF;
 
-    -- No caso de INSERT, inserir um novo registro na tabela subjacente.
-    IF TG_OP = 'INSERT' THEN
-        INSERT INTO curso (nome, codigo, idioma)
-        VALUES (NEW.nome, NEW.codigo, NEW.idioma);
-    END IF;
 
     -- Exemplo de mensagem para o usuário com os valores antes e depois da operação.
     RAISE NOTICE 'Operação % realizada em curso com ID %: Nome antigo: %, Código antigo: %, Idioma antigo: %. Novos valores: Nome: %, Código: %, Idioma: %',
@@ -53,7 +48,7 @@ $$ LANGUAGE plpgsql;
 
 -- Crie a trigger INSTEAD OF para a view view_cursos.
 CREATE TRIGGER instead_of_update_view_cursos
-INSTEAD OF INSERT OR UPDATE OR DELETE
+INSTEAD OF UPDATE OR DELETE
 ON view_cursos
 FOR EACH ROW
 EXECUTE FUNCTION tr_instead_of_update_view_cursos();
