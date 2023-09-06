@@ -16,5 +16,6 @@ watch_turma_ofertada
 instead_of_insert_view_cursos
 watch_curso
 watch_pessoa
+instead_of_delete_editais_abertos
 
 # end
