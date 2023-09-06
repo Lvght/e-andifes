@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y libpq-dev git unzip  && \
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 # Para o caso do composer implicar com a origem de alguns pacotes.
+RUN cd /var/www/html
 RUN yes | composer install
 
 CMD ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html/public"]
