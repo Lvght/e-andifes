@@ -8,6 +8,10 @@ fn_table_introspect
 fn_who_am_i
 fn_get_my_roles
 fn_parceiros_inativos
+fn_visualiza_status_turma
+fn_watch_gestor_oferta_coletiva
+pr_adicionar_tipo_ficha
+
 fn_parceiros_ativos
 fn_turmas_finalizadas
 
@@ -18,4 +22,5 @@ as_horario_turma_valido
 pr_cadastra_ficha_adesao_docente_oferta_coletiva
 pr_cadastra_parceiro
 pr_cadastra_turmas_oc
+
 # end
