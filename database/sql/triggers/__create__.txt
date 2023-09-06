@@ -1,9 +1,11 @@
 after_insert_update_pessoa_telefone
-after_insert_view_pessoa
+instead_of_insert_view_pessoa
 after_delete_pessoa_telefone
 after_delete_pessoa_email
 before_insert_update_data_turma
 before_delete_markasinactive_pessoa
+before_insert_update_numero_inscritos
+instead_of_insert_view_turma_especifica_oferta_coletiva
 watch_professor_isf
 VERY_SPECIAL_TRIGGER_perm_to_the_manager
 instead_of_insert_view_turma
@@ -12,5 +14,7 @@ watch_turma_ofertada
 instead_of_insert_view_cursos
 watch_curso
 instead_of_update_view_pessoas_com_acesso_ao_sistema
+watch_pessoa
+
 
 # end
