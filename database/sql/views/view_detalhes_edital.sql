@@ -13,10 +13,10 @@ SELECT  e.id,
         e.semestre,
         e.publicado_por, 
         p.nome_registro AS nome_gestor,
-        g.papel_atuacao AS atuacao_gestor
-        f.titulo AS titulo_ficha
-        f.data_inicio AS data_inicio_ficha
-        f.data_termino AS data_termino_ficha
+        g.papel_atuacao AS atuacao_gestor,
+        f.titulo AS titulo_ficha,
+        f.data_inicio AS data_inicio_ficha,
+        f.data_termino AS data_termino_ficha,
         f.observacoes AS observacoes_ficha
 
 FROM edital AS e
