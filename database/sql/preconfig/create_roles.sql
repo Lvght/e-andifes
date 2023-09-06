@@ -5,3 +5,5 @@ CREATE ROLE coordenador_administrativo INHERIT NOLOGIN;
 CREATE ROLE aluno_especializacao INHERIT NOLOGIN;
 
 GRANT especialista TO gestor_andifes;
+
+GRANT especialista to gestor_oferta_coletiva;
