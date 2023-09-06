@@ -11,7 +11,6 @@
 */
 CREATE OR REPLACE FUNCTION edital_data_update()
     RETURNS trigger
-    LANGUAGE plpgsql
 AS
 $$
 BEGIN
@@ -20,9 +19,10 @@ BEGIN
     END IF;
     RETURN NEW;
 END;
-$$
+$$ LANGUAGE plpgsql;
 
 CREATE TRIGGER tr_edital_data_update
-BEFORE UPDATE ON edital FOR EACH ROW
+BEFORE UPDATE ON edital 
+FOR EACH ROW
 WHEN (OLD.data_publicacao IS DISTINCT FROM NEW.data_publicacao)
 EXECUTE FUNCTION edital_data_update();
