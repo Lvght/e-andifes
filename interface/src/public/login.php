@@ -1,11 +1,42 @@
 <?php
-
+include $_ENV['HOME'] . '/helpers/twig.php';
 // Envia a página de template
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    include $_ENV['HOME'] . '/helpers/twig.php';
-    $template = $twig->load('login.html');
-    echo $template->render(['erro' => $_GET['erro'] ?? null]);
-    // echo "saidps";
+
+    try {
+
+        /* tive que fazer desse jeito, pois o método 'executaQueryNoBancoDeDados'
+        verifica se o usuário está logado, fazendo com que eu não
+        saia da página inicial */
+        $username = 'postgres';
+        $password = 'postgres';
+        $host = "database";
+        $database = "andifes";
+        $port = 5432;
+
+        $connString = "host={$host} port={$port} dbname={$database} user={$username} password={$password}";
+        $conn = @pg_connect($connString);
+        
+        $table = 'editais_abertos';
+        $query = "SELECT * FROM $table";
+        $result = @pg_query($conn, $query);
+
+        if (!$result) {
+            throw new Exception(pg_last_error($conn));
+        }
+
+        $campos = @pg_fetch_all($result);
+
+        $template = $twig->load('login.html');
+        echo $template->render(['erro' => $_GET['erro'] ?? null, 'test' => 'test', 'editais' => $campos]);
+    }
+    
+    catch (Throwable $e) {
+        $error = $e->getMessage();
+        
+        $template = $twig->load('500.html');
+        echo $template->render(['error' => $error]);
+    }
 }
 
 // Recebe os dados do formulário
