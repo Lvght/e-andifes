@@ -10,25 +10,30 @@ RETURNS TABLE (
     categoria CATEGORIA_PROFESSOR_ISF
 ) AS $$
 DECLARE
-    -- Declaração de um registro para armazenar o professor ISF
-    professor_record RECORD;
     -- Declaração do cursor explícito para buscar o professor seguindo parâmetros passados
-    CURSOR professor_isf IS
+    professor_isf CURSOR FOR
         SELECT 
-            cpf, 
-            id_ficha_base, 
-            categoria
+            p.cpf, 
+            p.id_ficha_base, 
+            p.categoria
         FROM 
-            professor_isf
-        WHERE cpf = cpf_param OR id_ficha_base = id_ficha_base_param;
+            professor_isf p
+        WHERE p.cpf = cpf_param OR p.id_ficha_base = id_ficha_base_param;
+        -- Declaração de um registro para armazenar o professor ISF
+        professor_record RECORD;
 BEGIN
     -- Abertura do cursor
     OPEN professor_isf;
 
-    -- Loop que itera sobre o professor selecionado
-    FOR professor_record IN professor_isf
     LOOP
-        RETURN NEXT professor_record;
+        FETCH professor_isf INTO professor_record;
+        EXIT WHEN NOT FOUND;
+
+        cpf := professor_record.cpf;
+        id_ficha_base := professor_record.id_ficha_base;
+        categoria := professor_record.categoria;
+
+        RETURN NEXT;
     END LOOP;
 
     -- Fechamento do cursor

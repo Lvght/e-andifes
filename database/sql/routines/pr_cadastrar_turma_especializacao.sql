@@ -5,7 +5,7 @@ CREATE OR REPLACE PROCEDURE pr_cadastra_turmas_especializacao (
   p_id_disc_especilizacao INTEGER,
   p_codigo_turma INTEGER,
   p_data_inicio  DATE,
-  p_data_fim DATE, 
+  p_data_fim DATE 
 )
 AS $$
 BEGIN
