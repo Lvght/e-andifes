@@ -40,7 +40,7 @@ BEGIN
     CLOSE gest_c;
 
     INSERT INTO edital (data_publicacao, nome, arquivo, ano, semestre, publicado_por, criado_em, criado_por)
-    VALUES (NEW.data_publicacao, NEW.nome, NEW.arquivo, NEW.ano, NEW.semestre, cpf_buscado, CURRENT_TIMESTAMP, CURRENT_USER);
+    VALUES (NEW.data_publicacao, NEW.nome, NEW.arquivo, NEW.ano, NEW.semestre, cpf_buscado, NEW.criado_em, NEW.criado_por);
     RETURN NEW;
 END;
 $$
