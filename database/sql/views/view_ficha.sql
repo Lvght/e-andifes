@@ -1,3 +1,4 @@
+--view para visualizar a ficha base
 CREATE OR REPLACE VIEW view_ficha AS
 SELECT
     id,
