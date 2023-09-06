@@ -1,0 +1,30 @@
+{#
+ISTO É UM EXEMPLO.
+
+EU DEFINI UM TEMPLATE BASE QUE POSSUI ALGUNS BLOCOS CUSTOMIZÁVEIS.
+USE ELES PARA CONSTRUIR A SUA PÁGINA DE ACORDO COM OS ARTEFATOS
+QUE VOCÊ DESENVOLVEU.
+
+OS BLOCOS DISPONÍVEIS SÃO:
+
+- tituloDaPagina
+- conteudoDaPagina
+#}
+
+{% extends "inc/base.html" %}
+
+
+{% block tituloDaPagina %}
+{{ edital.nome }}
+{% endblock %}
+
+{% block conteudoDaPagina %}
+<h1 class="mt-4">{{ edital.nome }}</h1>
+
+<button class="btn btn-primary" onclick="window.location.href='/editais/download.php?id={{ edital.id }}'">
+    <i class="fa fa-file" aria-hidden="true"></i>
+    Baixar PDF
+</button>
+<hr>
+
+{% endblock %}
