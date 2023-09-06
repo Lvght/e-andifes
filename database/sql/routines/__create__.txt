@@ -22,5 +22,4 @@ pr_filtra_edital_por_ano
 pr_cadastra_ficha_adesao_rede_andifes
 pr_cadastra_ficha_credenciamento_professor
 
-after_insert_update_infos_fichas
 # end

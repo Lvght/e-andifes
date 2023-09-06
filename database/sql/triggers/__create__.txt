@@ -10,5 +10,5 @@ watch_turma_ofertada
 instead_of_insert_view_cursos
 watch_curso
 watch_pessoa
-
+after_insert_update_infos_fichas
 # end
