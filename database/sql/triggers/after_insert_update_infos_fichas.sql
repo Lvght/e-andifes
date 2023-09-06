@@ -7,15 +7,16 @@ trigger DML registra as modificações feitas na tabela "ficha_base" em uma tabe
 que rastreará qualquer operação de INSERT, UPDATE ou DELETE na tabela.
 */
 
-CREATE OR REPLACE ASSERTION ficha_ativa
-CHECK (
-    current_date <= ALL (
-        SELECT data_termino
-        FROM ficha_base
-    )
-);
+--sintática não funciona no postgress
+--CREATE OR REPLACE ASSERTION ficha_ativa
+--CHECK (
+--    current_date <= ALL (
+--    SELECT data_termino
+--        FROM ficha_base
+--    )
+--);
 
-#TriggerDML
+--TriggerDML
 CREATE TABLE ficha_base_audit (
     id SERIAL PRIMARY KEY,
     acao VARCHAR(10),

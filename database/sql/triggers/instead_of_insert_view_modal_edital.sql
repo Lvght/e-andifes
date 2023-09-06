@@ -10,7 +10,7 @@ BEGIN
     INSERT INTO edital (data_publicacao, nome, ano, semestre, publicado_por, criado_em, criado_por)
     VALUES (NEW.data_publicacao, NEW.nome, NEW.ano, NEW.semestre, NEW.publicado_por, NEW.criado_em, NEW.criado_por);
     RETURN NULL;
-END;
+END
 $$ 
 LANGUAGE plpgsql;
 
