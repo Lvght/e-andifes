@@ -8,6 +8,7 @@ pessoa_telefone
 
 especialista
 gestor_andifes
+parceiro
 edital
 cursos
 
