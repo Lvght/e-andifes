@@ -10,6 +10,7 @@ fn_who_am_i
 fn_get_my_roles
 fn_parceiros_inativos
 fn_parceiros_pendentes
+fn_selecao_professor_isf
 fn_visualiza_status_turma
 fn_watch_gestor_oferta_coletiva
 fn_todos_parceiros
@@ -30,5 +31,6 @@ pr_cadastra_ficha_adesao_docente_oferta_coletiva
 pr_cadastra_ficha_inscricao_oferta_coletiva
 pr_cadastra_parceiro
 pr_cadastra_turmas_oc
+pr_cadastrar_turma_especializacao
 
 # end

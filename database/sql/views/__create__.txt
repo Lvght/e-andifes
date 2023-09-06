@@ -8,6 +8,7 @@ view_pessoas_com_acesso
 view_reg_pessoa
 
 view_turma_especifica_oferta_coletiva
+view_turmas_especializacao
 view_parceiros
 view_lista_editais_em_aberto
 view_ficha
