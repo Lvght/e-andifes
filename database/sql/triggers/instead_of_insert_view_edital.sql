@@ -13,34 +13,20 @@ DECLARE
     cpf_buscado integer;
     gest_c refcursor;
     esp_c refcursor;
-    edi_r record;
+    rec record;
     gest_r record;
 BEGIN
-    OPEN gest_c FOR SELECT 1 FROM gestor_andifes
-    WHERE cpf = NEW.gestor_cpf;
-    FETCH gest_c INTO edi_r;
+    OPEN gest_c FOR SELECT * FROM gestor_andifes
+    WHERE cpf = NEW.publicado_por;
+    FETCH gest_c INTO rec;
 
     IF NOT FOUND THEN
-        CLOSE gest_c;
-        OPEN esp_c FOR SELECT 1 FROM especialista
-        WHERE cpf = NEW.gestor_cpf;
-        FETCH esp_c INTO gest_r;
-
-        IF NOT FOUND THEN
-            RAISE EXCEPTION 'Nao foi possivel associar um especialista ao cpf: %', NEW.gestor_cpf;
-        ELSE
-            INSERT INTO gestor_andifes (cpf, papel_atuacao)
-            VALUES (NEW.gestor_cpf, NEW.gestor_papel)
-            RETURNING cpf INTO cpf_buscado;
-        END IF;
-        CLOSE esp_c;
-    ELSE
-        cpf_buscado := edi_r;
+        RAISE EXCEPTION 'Nao foi possivel associar um especialista ao cpf: %', NEW.publicado_por;
     END IF;
     CLOSE gest_c;
 
     INSERT INTO edital (data_publicacao, nome, arquivo, ano, semestre, publicado_por, criado_em, criado_por)
-    VALUES (NEW.data_publicacao, NEW.nome, NEW.arquivo, NEW.ano, NEW.semestre, cpf_buscado, NEW.criado_em, NEW.criado_por);
+    VALUES (NEW.data_publicacao, NEW.nome, NULL, NEW.ano, NEW.semestre, NEW.publicado_por, NEW.criado_em, NEW.criado_por);
     RETURN NEW;
 END;
 $$
