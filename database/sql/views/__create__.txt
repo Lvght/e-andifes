@@ -2,6 +2,7 @@ view_admin_pessoa
 view_pessoas_orientador
 view_fn_turma_por_id
 view_cursos
+view_fn_modal_edital
 view_formularios_em_andamentos
 view_cursos_oc
 view_turmas_oc
@@ -13,4 +14,5 @@ view_turma_especifica_oferta_coletiva
 view_parceiros
 view_lista_editais_em_aberto
 view_ficha
+
 # end
