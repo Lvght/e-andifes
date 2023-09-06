@@ -6,7 +6,9 @@ after_insert_update_qtde_alunos_oferta_coletiva
 before_insert_update_data_turma
 
 before_insert_update_numero_inscritos
+instead_of_insert_view_cursos_oferta_coletiva
 instead_of_insert_view_turma_especifica_oferta_coletiva
+
 
 watch_docente_especialista
 watch_professor_isf
